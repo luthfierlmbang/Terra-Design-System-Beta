@@ -1,0 +1,51 @@
+@import '../../foundations/theme.css';
+
+.terraNavbar {
+  display: flex;
+  align-items: stretch;
+  height: 64px;
+  background: var(--color-bg-surface-primary-default);
+  border-top: 1px solid var(--color-border-tertiary-default);
+  width: 100%;
+}
+
+.terraNavbar__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  color: var(--color-text-secondary-default);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  transition: color 160ms ease;
+}
+
+.terraNavbar__item--active {
+  color: var(--color-bg-fill-secondary-default);
+}
+
+.terraNavbar__item--active .terraNavbar__icon {
+  color: var(--color-bg-fill-secondary-default);
+}
+
+.terraNavbar__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.terraNavbar__label {
+  font-size: 12px;
+  line-height: 16px;
+}

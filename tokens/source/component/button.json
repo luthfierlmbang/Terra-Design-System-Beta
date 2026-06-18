@@ -1,0 +1,16 @@
+{
+  "color/button/primary/bg/default": "{color/bg/fill/secondary/default}",
+  "color/button/primary/text/default": "{color/text/inverse/default}",
+  "color/button/secondary/bg/default": "{color/bg/fill/primary/default}",
+  "color/button/secondary/text/default": "{color/text/inverse/default}",
+  "color/button/outlined-primary/border/default": "{color/border/action/primary/default}",
+  "color/button/outlined-primary/text/default": "{color/text/action/primary/default}",
+  "color/button/outlined-secondary/border/default": "{color/border/action/secondary/default}",
+  "color/button/outlined-secondary/text/default": "{color/text/action/secondary/default}",
+  "color/button/danger/bg/default": "{color/bg/fill/danger/default}",
+  "color/button/danger/text/default": "{color/text/inverse/default}",
+  "color/button/disabled/bg/default": "{color/bg/disabled/default}",
+  "color/button/disabled/text/default": "{color/text/inverse/default}",
+  "color/button/text-button/text/default": "{color/text/action/primary/default}",
+  "color/button/text-button/text/disabled": "{color/text/primary/disabled}"
+}

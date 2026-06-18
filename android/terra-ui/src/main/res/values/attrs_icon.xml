@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraIconView">
+        <attr name="terraIconCategory" format="enum">
+            <enum name="system" value="0" />
+            <enum name="action" value="1" />
+            <enum name="navigation" value="2" />
+            <enum name="status" value="3" />
+            <enum name="info" value="4" />
+            <enum name="domain" value="5" />
+        </attr>
+        <attr name="terraIconName" format="enum">
+            <enum name="placeholder" value="0" />
+            <enum name="plus" value="1" />
+            <enum name="check" value="2" />
+            <enum name="close" value="3" />
+            <enum name="delete" value="4" />
+            <enum name="edit" value="5" />
+            <enum name="refresh" value="6" />
+            <enum name="search" value="7" />
+            <enum name="sort" value="8" />
+            <enum name="qrScan" value="9" />
+            <enum name="minus" value="10" />
+            <enum name="arrowLeft" value="11" />
+            <enum name="arrowRight" value="12" />
+            <enum name="chevronDown" value="13" />
+            <enum name="chevronLeft" value="14" />
+            <enum name="chevronRight" value="15" />
+            <enum name="chevronUp" value="16" />
+            <enum name="kebabHorizontal" value="17" />
+            <enum name="kebabHorizontal2" value="18" />
+            <enum name="hamburgerMenu" value="19" />
+            <enum name="done" value="20" />
+            <enum name="inProgress" value="21" />
+            <enum name="offline" value="22" />
+            <enum name="exclamation" value="23" />
+            <enum name="information" value="24" />
+            <enum name="questionmark" value="25" />
+            <enum name="counter" value="26" />
+            <enum name="cashIn" value="27" />
+            <enum name="cashOut" value="28" />
+            <enum name="nasabah" value="29" />
+            <enum name="bank" value="30" />
+            <enum name="report" value="31" />
+            <enum name="reportTransaction" value="32" />
+            <enum name="akusisi" value="33" />
+            <enum name="home" value="34" />
+            <enum name="user" value="35" />
+            <enum name="settings" value="36" />
+            <enum name="notification" value="37" />
+            <enum name="time" value="38" />
+            <enum name="calendar" value="39" />
+        </attr>
+        <attr name="terraIconTint" format="color" />
+        <attr name="terraIconSize" format="dimension" />
+    </declare-styleable>
+</resources>

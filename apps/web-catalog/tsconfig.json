@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@terra/web-ui": ["../../packages/web-ui/src"]
+    }
+  },
+  "include": ["src"]
+}

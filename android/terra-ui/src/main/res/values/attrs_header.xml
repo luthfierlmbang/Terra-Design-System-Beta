@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraHeaderView">
+        <attr name="terraHeaderTitle" format="string" />
+        <attr name="terraHeaderModuleName" format="string" />
+        <attr name="terraHeaderApkName" format="string" />
+        <attr name="terraHeaderShowStatusBar" format="boolean" />
+    </declare-styleable>
+</resources>

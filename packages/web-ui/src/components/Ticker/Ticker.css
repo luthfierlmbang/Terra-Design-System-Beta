@@ -1,0 +1,53 @@
+@import '../../foundations/theme.css';
+
+.terraTicker {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--spacing-12);
+  padding: var(--spacing-12);
+  border-radius: var(--radius-medium);
+  border: 1px solid transparent;
+}
+
+.terraTicker--detailed {
+  align-items: start;
+}
+
+.terraTicker--information {
+  background: var(--color-bg-tone-info);
+  color: var(--color-text-tone-info);
+  border-color: var(--color-border-tone-info);
+}
+
+.terraTicker--warning {
+  background: var(--color-bg-tone-warning);
+  color: var(--color-text-tone-warning);
+  border-color: var(--color-border-tone-warning);
+}
+
+.terraTicker--error {
+  background: var(--color-bg-tone-danger);
+  color: var(--color-text-tone-danger);
+  border-color: var(--color-border-tone-danger);
+}
+
+.terraTicker__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.terraTicker__content {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.terraTicker__title {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.terraTicker__message {
+  font-size: 13px;
+  line-height: 18px;
+}

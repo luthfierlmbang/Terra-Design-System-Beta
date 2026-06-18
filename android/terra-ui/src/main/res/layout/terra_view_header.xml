@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/terraHeaderStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A000000"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="3dp">
+
+        <TextView
+            android:id="@+id/terraHeaderStatusTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30"
+            android:textColor="@color/terra_color_neutral_10"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terraHeaderMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/terra_color_orange_500"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="24dp"
+        android:paddingTop="40dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="16dp">
+
+        <FrameLayout
+            android:id="@+id/terraHeaderIconContainer"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/terraHeaderTitle"
+                style="@style/Widget.Terra.Header.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title" />
+
+            <TextView
+                android:id="@+id/terraHeaderPageIdentifier"
+                style="@style/Widget.Terra.Header.PageIdentifier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Put Main Module name | Put APK Name" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

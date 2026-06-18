@@ -1,0 +1,49 @@
+@import '../../foundations/theme.css';
+
+.terraChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--color-border-inactive-default);
+  background: var(--color-bg-surface-primary-default);
+  color: var(--color-text-inactive-default);
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.terraChip--selected {
+  background: rgba(150, 208, 210, 0.25);
+  border-color: var(--color-border-action-primary-default);
+  color: var(--color-text-action-primary-default);
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.terraChip__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.terraChip__counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 var(--spacing-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-fill-danger-default);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-text-inverse-default);
+}
+
+.terraChip:focus-visible {
+  outline: 2px solid var(--color-border-action-primary-default);
+  outline-offset: 2px;
+}

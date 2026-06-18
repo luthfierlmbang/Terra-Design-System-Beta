@@ -1,0 +1,5 @@
+{
+  "color/surface/card/bg/default": "{color/bg/surface/primary/default}",
+  "color/surface/card/border/default": "{color/border/default}",
+  "shadow/surface/card/default": "{shadow.card}"
+}

@@ -1,0 +1,97 @@
+@import '../../foundations/theme.css';
+
+.terraButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+  border-radius: var(--radius-medium);
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, opacity 160ms ease;
+}
+
+.terraButton:focus-visible {
+  outline: 2px solid var(--color-border-action-primary-default);
+  outline-offset: 2px;
+}
+
+.terraButton--normal {
+  padding: 8px var(--spacing-32);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.terraButton--small {
+  padding: 4px var(--spacing-32);
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 6px;
+}
+
+.terraButton--text.terraButton--normal,
+.terraButton--text.terraButton--small {
+  padding: 4px var(--spacing-16);
+}
+
+.terraButton--fullWidth {
+  width: 100%;
+}
+
+.terraButton--primary {
+  background: var(--color-button-primary-bg-default);
+  color: var(--color-button-primary-text-default);
+}
+
+.terraButton--secondary {
+  background: var(--color-button-secondary-bg-default);
+  color: var(--color-button-secondary-text-default);
+}
+
+.terraButton--outlined-primary {
+  background: transparent;
+  border-color: var(--color-button-outlined-primary-border-default);
+  color: var(--color-button-outlined-primary-text-default);
+}
+
+.terraButton--outlined-secondary {
+  background: transparent;
+  border-color: var(--color-button-outlined-secondary-border-default);
+  color: var(--color-button-outlined-secondary-text-default);
+}
+
+.terraButton--danger {
+  background: var(--color-button-danger-bg-default);
+  color: var(--color-button-danger-text-default);
+}
+
+.terraButton--text {
+  background: transparent;
+  color: var(--color-button-text-button-text-default);
+  border-color: transparent;
+}
+
+.terraButton:disabled {
+  cursor: not-allowed;
+}
+
+.terraButton--primary:disabled,
+.terraButton--secondary:disabled,
+.terraButton--danger:disabled {
+  background: var(--color-button-disabled-bg-default);
+  color: var(--color-button-disabled-text-default);
+  border-color: var(--color-button-disabled-bg-default);
+}
+
+.terraButton--outlined-primary:disabled,
+.terraButton--outlined-secondary:disabled {
+  background: transparent;
+  border-color: var(--color-border-disabled-default);
+  color: var(--color-text-primary-disabled);
+}
+
+.terraButton--text:disabled {
+  color: var(--color-button-text-button-text-disabled);
+}

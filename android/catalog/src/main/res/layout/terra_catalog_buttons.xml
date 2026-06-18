@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.terra.ds.button.TerraButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Primary"
+            app:terraButtonType="primary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.ds.button.TerraButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Secondary"
+            app:terraButtonType="secondary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.ds.button.TerraButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Outlined Primary"
+            app:terraButtonType="outlinedPrimary"
+            app:terraButtonSize="normal" />
+
+        <com.terra.ds.button.TerraButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Danger"
+            app:terraButtonType="danger"
+            app:terraButtonSize="normal" />
+
+        <com.terra.ds.button.TerraButtonView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Text Button"
+            app:terraButtonType="text"
+            app:terraButtonSize="small" />
+
+        <com.terra.ds.button.TerraButtonView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Disabled Full Width"
+            app:terraButtonType="primary"
+            app:terraButtonSize="normal" />
+    </LinearLayout>
+</ScrollView>

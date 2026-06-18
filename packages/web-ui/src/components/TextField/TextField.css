@@ -1,0 +1,92 @@
+@import '../../foundations/theme.css';
+
+.terraField {
+  display: grid;
+  gap: var(--spacing-6);
+  color: var(--color-text-primary-default);
+}
+
+.terraField__label {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-secondary-default);
+}
+
+.terraField__helper {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-secondary-default);
+}
+
+.terraField__control {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  min-height: 48px;
+  padding: 0 var(--spacing-14);
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-surface-primary-default);
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.terraField__control:has(.terraField__input:focus-visible) {
+  border-color: var(--color-border-action-primary-default);
+  box-shadow: 0 0 0 2px rgba(2, 116, 121, 0.16);
+}
+
+.terraField__icon,
+.terraField__affix {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-secondary-default);
+  font-size: 14px;
+}
+
+.terraField__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.terraField__input:focus {
+  outline: 0;
+}
+
+.terraField__input::placeholder {
+  color: var(--color-text-secondary-default);
+}
+
+.terraField--disabled .terraField__control {
+  background: var(--color-bg-disabled-default);
+  border-color: var(--color-border-disabled-default);
+}
+
+.terraField--disabled .terraField__label,
+.terraField--disabled .terraField__helper,
+.terraField--disabled .terraField__input,
+.terraField--disabled .terraField__icon,
+.terraField--disabled .terraField__affix {
+  color: var(--color-text-primary-disabled);
+}
+
+.terraField__control--select {
+  position: relative;
+}
+
+.terraField__input--select {
+  appearance: none;
+  padding-right: var(--spacing-24);
+}
+
+.terraField__icon--select {
+  position: absolute;
+  right: var(--spacing-14);
+
+  pointer-events: none;
+}

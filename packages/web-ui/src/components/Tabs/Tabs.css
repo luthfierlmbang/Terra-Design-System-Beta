@@ -1,0 +1,38 @@
+@import '../../foundations/theme.css';
+
+.terraTabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-surface-primary-default);
+}
+
+.terraTabs--scrollable {
+  display: flex;
+  overflow-x: auto;
+}
+
+.terraTabs__item {
+  min-height: 40px;
+  padding: 0 var(--spacing-16);
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary-default);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.terraTabs__item--selected {
+  background: var(--color-button-primary-bg-default);
+  color: var(--color-button-primary-text-default);
+  font-weight: 600;
+}
+
+.terraTabs__item:focus-visible {
+  outline: 2px solid var(--color-border-action-primary-default);
+  outline-offset: -2px;
+}

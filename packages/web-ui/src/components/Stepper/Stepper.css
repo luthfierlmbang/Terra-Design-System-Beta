@@ -1,0 +1,91 @@
+@import '../../foundations/theme.css';
+
+.terraStepper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+}
+
+.terraStepper__step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+  width: 50px;
+}
+
+.terraStepper__bullet-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4);
+  width: 100%;
+}
+
+.terraStepper__bullet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.terraStepper__bullet--inactive {
+  background: var(--color-border-secondary-default);
+  padding: var(--spacing-8) 10px;
+}
+
+.terraStepper__bullet--progress {
+  background: var(--color-bg-fill-primary-default);
+  padding: var(--spacing-8) 10px;
+}
+
+.terraStepper__bullet--complete {
+  background: var(--color-bg-fill-success-default);
+  padding: var(--spacing-8);
+}
+
+.terraStepper__bullet-number {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--color-text-inverse-default);
+  width: 20px;
+  text-align: center;
+}
+
+.terraStepper__caption {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-text-primary-default);
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.terraStepper__connector {
+  flex: 1 0 4px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.terraStepper__line {
+  height: 4px;
+  width: 100%;
+  border-radius: var(--radius-pill);
+}
+
+.terraStepper__line--inactive {
+  background: var(--color-border-secondary-default);
+}
+
+.terraStepper__line--progress {
+  background: var(--color-bg-fill-primary-default);
+}
+
+.terraStepper__line--complete {
+  background: var(--color-bg-fill-success-default);
+}

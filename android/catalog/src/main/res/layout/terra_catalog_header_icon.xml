@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terra_color_neutral_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.terra.ds.header.TerraHeaderView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:terraHeaderTitle="Title"
+            app:terraHeaderModuleName="Put Main Module name"
+            app:terraHeaderApkName="Put APK Name"
+            app:terraHeaderShowStatusBar="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TerraIcon"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:showDividers="middle"
+                android:dividerPadding="12dp">
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="system"
+                    app:terraIconName="placeholder" />
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="action"
+                    app:terraIconName="plus" />
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="action"
+                    app:terraIconName="search" />
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="navigation"
+                    app:terraIconName="arrowRight" />
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="action"
+                    app:terraIconName="check" />
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="system"
+                    app:terraIconName="home" />
+
+                <com.terra.ds.icon.TerraIconView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:terraIconCategory="system"
+                    app:terraIconName="settings" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

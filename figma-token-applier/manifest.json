@@ -1,0 +1,7 @@
+{
+  "name": "TERRA TAB Token Applier",
+  "id": "terra-tab-token-applier",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"]
+}

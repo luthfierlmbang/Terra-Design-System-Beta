@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.terra.ds.form.TerraSearchBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:terraSearchBarState="default"
+            app:terraSearchBarText="Search something" />
+
+        <com.terra.ds.form.TerraSelectView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraSelectFilled="true"
+            app:terraSelectPlaceholder="Choose item" />
+
+        <com.terra.ds.form.TerraTextFieldView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraTextFieldHelper="Helper Type Here"
+            app:terraTextFieldLabel="Label"
+            app:terraTextFieldPlaceholder="Input text" />
+
+        <com.terra.ds.form.TerraQuantityEditorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraQuantityState="default"
+            app:terraQuantityValue="1.000" />
+
+        <com.terra.ds.form.TerraImageUploadView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraImageUploadHint="Helper Type Here"
+            app:terraImageUploadLabel="Label" />
+
+        <com.terra.ds.form.TerraBottomSheetView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraBottomSheetTitle="Bottom Sheet"
+            app:terraBottomSheetVariant="options" />
+
+        <com.terra.ds.form.TerraBottomSheetView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraBottomSheetTitle="Countdown"
+            app:terraBottomSheetVariant="countdown" />
+
+        <com.terra.ds.form.TerraDatePickerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraDatePickerMode="double"
+            app:terraDatePickerMonth="Desember"
+            app:terraDatePickerNextMonth="Januari"
+            app:terraDatePickerYear="2023" />
+    </LinearLayout>
+</ScrollView>

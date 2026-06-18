@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="terra_radius_small">6dp</dimen>
+    <dimen name="terra_radius_medium">8dp</dimen>
+    <dimen name="terra_radius_large">12dp</dimen>
+    <dimen name="terra_radius_pill">50dp</dimen>
+</resources>

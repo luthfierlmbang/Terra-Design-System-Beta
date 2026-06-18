@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="terra_color_orange_500">#F4831F</color>
+    <color name="terra_color_teal_700">#027479</color>
+    <color name="terra_color_blue_500">#0092E6</color>
+    <color name="terra_color_yellow_500">#F7AE19</color>
+    <color name="terra_color_red_500">#EF3636</color>
+    <color name="terra_color_green_500">#00C781</color>
+    <color name="terra_color_orange_600">#FF7C00</color>
+    <color name="terra_color_teal_100">#D9EEEF</color>
+    <color name="terra_color_teal_050">#EBF5F4</color>
+    <color name="terra_color_blue_050">#F5FAFE</color>
+    <color name="terra_color_orange_050">#FFEDDF</color>
+    <color name="terra_color_red_050">#FFE8E8</color>
+    <color name="terra_color_blue_100">#D8ECFA</color>
+    <color name="terra_color_orange_100">#FFF3E5</color>
+    <color name="terra_color_neutral_10">#FFFFFF</color>
+    <color name="terra_color_neutral_30">#EDEDED</color>
+    <color name="terra_color_neutral_40">#DFDFDF</color>
+    <color name="terra_color_neutral_50">#CCCCCC</color>
+    <color name="terra_color_neutral_60">#999999</color>
+    <color name="terra_color_neutral_70">#7A7D7F</color>
+    <color name="terra_color_neutral_80">#555555</color>
+    <color name="terra_color_neutral_90">#333333</color>
+</resources>

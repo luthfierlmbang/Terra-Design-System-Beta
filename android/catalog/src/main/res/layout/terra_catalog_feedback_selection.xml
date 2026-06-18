@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.terra.ds.selection.TerraChipView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:terraChipSelected="true"
+            app:terraChipShowCounter="true"
+            app:terraChipText="This is Chips" />
+
+        <com.terra.ds.selection.TerraNavbarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraNavbarSelectedItem="home" />
+
+        <com.terra.ds.selection.TerraCheckboxView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraSelectionChecked="true"
+            app:terraSelectionLabel="Checkbox" />
+
+        <com.terra.ds.selection.TerraRadioView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraSelectionLabel="Radio" />
+
+        <com.terra.ds.selection.TerraToggleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraSelectionChecked="true"
+            app:terraSelectionLabel="Toggle" />
+
+        <com.terra.ds.selection.TerraTabView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraTabItems="Overview,Detail,History"
+            app:terraTabSelectedIndex="1" />
+
+        <com.terra.ds.feedback.TerraTickerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraTickerDetailed="false"
+            app:terraTickerMessage="Warning information maximum 1 line warning information maximum 1 line"
+            app:terraTickerTone="information" />
+
+        <com.terra.ds.feedback.TerraTickerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraTickerDetailed="true"
+            app:terraTickerMessage="Warning information maximum 2 line warning information maximum 2 line Warning information maximum 2 line."
+            app:terraTickerTitle="Warning Title Text"
+            app:terraTickerTone="warning" />
+
+        <com.terra.ds.feedback.TerraLoadingView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraLoadingMessage="Dalam Proses..."
+            app:terraLoadingProgress="80" />
+
+        <com.terra.ds.feedback.TerraPageControlView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraPageCount="5"
+            app:terraSelectedPage="2" />
+
+        <com.terra.ds.feedback.TerraProgressBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraProgressBarType="bar1" />
+
+        <com.terra.ds.feedback.TerraStepperView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:terraStepperCount="4"
+            app:terraStepperCurrentStep="2" />
+
+        <com.terra.ds.feedback.TerraEmptyStateView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:terraEmptyStateVariant="connectionError" />
+    </LinearLayout>
+</ScrollView>

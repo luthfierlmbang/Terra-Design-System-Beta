@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="terra_button_height_normal">40dp</dimen>
+    <dimen name="terra_button_height_small">32dp</dimen>
+    <dimen name="terra_timer_dot_size">4dp</dimen>
+    <dimen name="terra_timer_corner_radius">12dp</dimen>
+    <dimen name="terra_chip_height">36dp</dimen>
+    <dimen name="terra_chip_selected_height">38dp</dimen>
+    <dimen name="terra_page_control_selected_width">16dp</dimen>
+    <dimen name="terra_page_control_dot_size">8dp</dimen>
+    <dimen name="terra_progress_height_small">10dp</dimen>
+    <dimen name="terra_progress_height_medium">14dp</dimen>
+    <dimen name="terra_navbar_height">64dp</dimen>
+    <dimen name="terra_bottom_sheet_corner_radius">24dp</dimen>
+    <dimen name="terra_loading_card_width">180dp</dimen>
+    <dimen name="terra_image_upload_height">154dp</dimen>
+    <dimen name="terra_date_cell_size">32dp</dimen>
+    <dimen name="terra_datepicker_width_single">318dp</dimen>
+    <dimen name="terra_datepicker_width_double">636dp</dimen>
+    <dimen name="terra_search_bar_height">40dp</dimen>
+    <dimen name="terra_select_width">268dp</dimen>
+    <dimen name="terra_text_field_height">40dp</dimen>
+    <dimen name="terra_stepper_bullet_size">48dp</dimen>
+    <dimen name="terra_selection_control_size">24dp</dimen>
+    <dimen name="terra_tab_height">40dp</dimen>
+    <dimen name="terra_ticker_min_height">40dp</dimen>
+    <dimen name="terra_quantity_editor_width">152dp</dimen>
+    <dimen name="terra_empty_state_illustration_width">240dp</dimen>
+    <dimen name="terra_empty_state_illustration_height">240dp</dimen>
+</resources>

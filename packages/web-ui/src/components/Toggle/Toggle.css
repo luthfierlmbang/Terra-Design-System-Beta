@@ -1,0 +1,88 @@
+@import '../../foundations/theme.css';
+
+.terraToggleField {
+  display: grid;
+  gap: var(--spacing-6);
+  color: var(--color-text-primary-default);
+}
+
+.terraToggleField__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-12);
+}
+
+.terraToggleField__copy {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.terraToggleField__label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.terraToggleField__helper {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-secondary-default);
+}
+
+.terraToggleField__switch {
+  position: relative;
+  display: inline-flex;
+}
+
+.terraToggleField__input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.terraToggleField__track {
+  display: inline-flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-disabled-default);
+  transition: background-color 160ms ease, opacity 160ms ease;
+}
+
+.terraToggleField__thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-surface-primary-default);
+  box-shadow: var(--shadow-subtle);
+  transition: transform 160ms ease;
+}
+
+.terraToggleField__input:checked + .terraToggleField__track {
+  background: var(--color-button-primary-bg-default);
+}
+
+.terraToggleField__input:checked + .terraToggleField__track .terraToggleField__thumb {
+  transform: translateX(20px);
+}
+
+.terraToggleField__input:focus-visible + .terraToggleField__track {
+  outline: 2px solid var(--color-border-action-primary-default);
+  outline-offset: 2px;
+}
+
+.terraToggleField--disabled {
+  cursor: not-allowed;
+}
+
+.terraToggleField--disabled .terraToggleField__track,
+.terraToggleField__input:disabled + .terraToggleField__track {
+  opacity: 0.56;
+}
+
+.terraToggleField--disabled .terraToggleField__label,
+.terraToggleField--disabled .terraToggleField__helper {
+  color: var(--color-text-primary-disabled);
+}

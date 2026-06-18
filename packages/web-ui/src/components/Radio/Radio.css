@@ -1,0 +1,82 @@
+@import '../../foundations/theme.css';
+
+.terraChoiceField {
+  display: grid;
+  gap: var(--spacing-6);
+  color: var(--color-text-primary-default);
+}
+
+.terraChoiceField__main {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-12);
+}
+
+.terraChoiceField__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.terraChoiceField__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-action-secondary-default);
+  background: var(--color-bg-surface-primary-default);
+  transition: background-color 160ms ease, border-color 160ms ease, opacity 160ms ease;
+}
+
+.terraChoiceField__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  transition: background-color 160ms ease, transform 160ms ease;
+  transform: scale(0.6);
+}
+
+.terraChoiceField__input:checked + .terraChoiceField__control {
+  border-color: var(--color-button-primary-bg-default);
+  background: var(--color-bg-surface-primary-default);
+}
+
+.terraChoiceField__input:checked + .terraChoiceField__control .terraChoiceField__indicator {
+  background: var(--color-button-primary-bg-default);
+  transform: scale(1);
+}
+
+.terraChoiceField__input:focus-visible + .terraChoiceField__control {
+  outline: 2px solid var(--color-border-action-primary-default);
+  outline-offset: 2px;
+}
+
+.terraChoiceField__label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.terraChoiceField__helper {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-text-secondary-default);
+}
+
+.terraChoiceField--disabled {
+  cursor: not-allowed;
+}
+
+.terraChoiceField--disabled .terraChoiceField__control,
+.terraChoiceField__input:disabled + .terraChoiceField__control {
+  border-color: var(--color-border-disabled-default);
+  background: var(--color-bg-disabled-default);
+}
+
+.terraChoiceField--disabled .terraChoiceField__label,
+.terraChoiceField--disabled .terraChoiceField__helper {
+  color: var(--color-text-primary-disabled);
+}

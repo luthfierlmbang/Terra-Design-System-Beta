@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Terra.Header.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/terra_color_neutral_10</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Widget.Terra.Header.PageIdentifier" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">@color/terra_color_neutral_10</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>
