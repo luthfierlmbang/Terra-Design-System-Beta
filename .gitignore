@@ -1,4 +1,16 @@
 node_modules/
 dist/
+build/
+coverage/
+.cache/
+.turbo/
+.parcel-cache/
+.next/
+.nuxt/
+out/
+.output/
+.env
+.env.*
+!.env.example
 .DS_Store
 .claude/
