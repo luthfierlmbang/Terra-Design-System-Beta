@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OasisToggleView">
+        <attr name="oasisToggleLabel" format="string" />
+        <attr name="oasisToggleChecked" format="boolean" />
+    </declare-styleable>
+</resources>

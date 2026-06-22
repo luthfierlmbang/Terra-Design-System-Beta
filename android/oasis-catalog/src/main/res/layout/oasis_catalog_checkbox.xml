@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox Component"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <com.oasis.designsystem.checkbox.OasisCheckboxView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:oasisCheckboxLabel="Unchecked"
+            app:oasisCheckboxChecked="false"
+            android:layout_marginBottom="12dp" />
+
+        <com.oasis.designsystem.checkbox.OasisCheckboxView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:oasisCheckboxLabel="Checked"
+            app:oasisCheckboxChecked="true"
+            android:layout_marginBottom="12dp" />
+
+        <com.oasis.designsystem.checkbox.OasisCheckboxView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:oasisCheckboxLabel="Disabled Unchecked"
+            app:oasisCheckboxChecked="false"
+            android:enabled="false"
+            android:layout_marginBottom="12dp" />
+
+        <com.oasis.designsystem.checkbox.OasisCheckboxView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:oasisCheckboxLabel="Disabled Checked"
+            app:oasisCheckboxChecked="true"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextArea Component"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <com.oasis.designsystem.textarea.OasisTextArea
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:oasisTextAreaHint="Comments"
+            app:oasisTextAreaRows="3"
+            app:oasisTextAreaMaxChars="200"
+            app:oasisTextAreaHelper="Up to 200 characters"
+            android:layout_marginBottom="16dp" />
+
+        <com.oasis.designsystem.textarea.OasisTextArea
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:oasisTextAreaHint="Description"
+            app:oasisTextAreaRows="5"
+            app:oasisTextAreaMaxChars="500"
+            app:oasisTextAreaText="Pre-filled text content for the description field." />
+
+    </LinearLayout>
+
+</ScrollView>

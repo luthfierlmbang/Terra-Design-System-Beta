@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="oasis_countries">
+        <item>Indonesia</item>
+        <item>Singapore</item>
+        <item>Malaysia</item>
+        <item>Thailand</item>
+        <item>Vietnam</item>
+    </string-array>
+    <string-array name="oasis_statuses">
+        <item>Active</item>
+        <item>Inactive</item>
+        <item>Pending</item>
+        <item>Suspended</item>
+    </string-array>
+</resources>

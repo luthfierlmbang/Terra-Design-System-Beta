@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OasisTextArea">
+        <attr name="oasisTextAreaHint" format="string" />
+        <attr name="oasisTextAreaText" format="string" />
+        <attr name="oasisTextAreaRows" format="integer" />
+        <attr name="oasisTextAreaMaxChars" format="integer" />
+        <attr name="oasisTextAreaHelper" format="string" />
+    </declare-styleable>
+</resources>
