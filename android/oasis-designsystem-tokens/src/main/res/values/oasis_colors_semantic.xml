@@ -29,4 +29,16 @@
     <color name="oasis_feedback_warning">@color/oasis_warning_500</color>
     <color name="oasis_feedback_danger">@color/oasis_danger_500</color>
     <color name="oasis_feedback_info">@color/oasis_info_500</color>
+
+    <!-- Tag surfaces -->
+    <color name="oasis_info_surface">@color/oasis_info_100</color>
+    <color name="oasis_success_surface">@color/oasis_success_100</color>
+    <color name="oasis_warning_surface">@color/oasis_warning_100</color>
+    <color name="oasis_danger_surface">@color/oasis_danger_100</color>
+
+    <!-- Tag text -->
+    <color name="oasis_info_text">@color/oasis_info_500</color>
+    <color name="oasis_success_text">@color/oasis_success_500</color>
+    <color name="oasis_warning_text">@color/oasis_warning_500</color>
+    <color name="oasis_danger_text">@color/oasis_danger_500</color>
 </resources>

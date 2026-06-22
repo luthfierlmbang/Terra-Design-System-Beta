@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OasisTagView">
+        <attr name="oasisTagVariant" format="enum">
+            <enum name="info" value="0" />
+            <enum name="success" value="1" />
+            <enum name="warning" value="2" />
+            <enum name="danger" value="3" />
+        </attr>
+        <attr name="oasisTagText" format="string" />
+    </declare-styleable>
+</resources>
