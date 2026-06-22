@@ -41,15 +41,85 @@ const buttonVariants: TerraButtonType[] = [
   'text',
 ];
 
-type IconGroup = { category: TerraIconCategory; label: string; names: TerraIconName[] };
+type IconRow = {
+  names: TerraIconName[];
+};
+
+type IconGroup = {
+  category: TerraIconCategory;
+  label: string;
+  description: string;
+  rows: IconRow[];
+};
 
 const iconGroups: IconGroup[] = [
-  { category: 'action', label: 'Action', names: ['plus', 'check', 'close', 'delete'] },
-  { category: 'navigation', label: 'Navigation', names: ['arrow-left', 'arrow-right', 'chevron-down', 'kebab-horizontal'] },
-  { category: 'status', label: 'Status', names: ['done', 'in-progress', 'offline'] },
-  { category: 'info', label: 'Information', names: ['exclamation', 'information', 'questionmark', 'counter'] },
-  { category: 'domain', label: 'Domain', names: ['cash-in', 'cash-out', 'nasabah', 'bank'] },
-  { category: 'system', label: 'System', names: ['home', 'user', 'settings', 'notification'] },
+  {
+    category: 'shapes',
+    label: 'Placeholder',
+    description: 'Bentuk awal yang terlihat di node.',
+    rows: [{ names: ['square', 'circle'] }],
+  },
+  {
+    category: 'system',
+    label: 'Default',
+    description: 'Grid ikon default yang besar pada node.',
+    rows: [
+      { names: ['home', 'settings', 'calendar', 'camera', 'chat', 'dashboard', 'email', 'email-2', 'face-recognition', 'grow'] },
+      { names: ['history', 'image', 'key', 'light', 'light-ray-top', 'light-ray-right', 'light-ray-bottom-left', 'light-ray-top-left', 'lock', 'map'] },
+      { names: ['monitoring', 'performance', 'scooter', 'star', 'switch', 'switch-2', 'target', 'vault', 'user', 'notification'] },
+    ],
+  },
+  {
+    category: 'action',
+    label: 'Action',
+    description: 'Ikon aksi yang terlihat di node.',
+    rows: [
+      { names: ['plus', 'check', 'close', 'delete', 'edit', 'refresh', 'search', 'sort', 'minus', 'filter-2'] },
+      { names: ['download', 'upload', 'print', 'logout', 'manual-sync', 'digital-sign', 'search-user', 'center', 'align-left', 'qr-scan'] },
+    ],
+  },
+  {
+    category: 'navigation',
+    label: 'Navigation',
+    description: 'Ikon navigasi di node.',
+    rows: [{ names: ['arrow-left', 'arrow-right', 'chevron-left', 'chevron-right', 'chevron-up', 'chevron-down', 'kebab-horizontal', 'kebab-vertical', 'hamburger-menu', 'expand', 'expand-2'] }],
+  },
+  {
+    category: 'status',
+    label: 'Status',
+    description: 'Ikon status utama di node.',
+    rows: [{ names: ['done', 'in-progress', 'offline'] }],
+  },
+  {
+    category: 'status',
+    label: 'Eye',
+    description: 'Ikon visibilitas di node (default & disabled).',
+    rows: [{ names: ['default', 'disabled'] }],
+  },
+  {
+    category: 'info',
+    label: 'Information',
+    description: 'Ikon informasi di node.',
+    rows: [{ names: ['exclamation', 'information', 'questionmark', 'counter', 'quest'] }],
+  },
+  {
+    category: 'domain',
+    label: 'Cash',
+    description: 'Ikon keuangan di node.',
+    rows: [{ names: ['cash-in', 'cash-out', 'cash'] }],
+  },
+  {
+    category: 'menu',
+    label: 'Menu',
+    description: 'Ilustrasi menu berwarna (raster) di node.',
+    rows: [{ names: ['akusisi-nasabah', 'keagenan', 'pemeliharaan-nasabah', 'transaksi'] }],
+  },
+  {
+    category: 'priority',
+    label: 'Priority',
+    description: 'Ikon prioritas berwarna di node.',
+    rows: [{ names: ['highest', 'high', 'medium', 'low', 'more-highest'] }],
+  },
 ];
 
 const navbarItems: TerraNavbarItem[] = [
@@ -63,6 +133,159 @@ const previewTabs: TerraTabItem[] = [
   { id: 'detail', label: 'Detail' },
   { id: 'history', label: 'History' },
 ];
+
+const cardInfoRows = Array.from({ length: 8 }, (_, index) => ({
+  label: 'Write Information Here...',
+  value: 'Write Information Here...',
+  visible: index === 0 || index === 1 || index === 2 || index === 3 || index === 4 || index === 5 || index === 6 || index === 7,
+}));
+
+function TerraCardShowcase() {
+  return (
+    <div className="cardShowcase">
+      <div className="cardShowcase__topbar">
+        <div className="cardShowcase__brandLockup">
+          <img src="/tmp/figma-card-assets/terra-header-logo.svg" alt="TERRA" className="cardShowcase__brandLogoImage" />
+          <span className="cardShowcase__brandText">Terra Design System</span>
+        </div>
+        <div className="cardShowcase__sparkles" aria-hidden="true">
+          {Array.from({ length: 21 }).map((_, index) => (
+            <span key={index} />
+          ))}
+        </div>
+      </div>
+
+      <div className="cardShowcase__hero">
+        <h3>Card</h3>
+        <p>Icon berfungsi sebagai jembatan antara pengguna dan fungsionalitas aplikasi.</p>
+      </div>
+
+      <section className="cardShowcase__group">
+        <div className="cardShowcase__groupHeader">
+          <h4>Menu Card</h4>
+          <p>Menandai area yang belum terisi, memberikan petunjuk visual yang jelas untuk konten yang akan datang.</p>
+        </div>
+        <div className="cardShowcase__surface">
+          <div className="terraCard terraCard--menu">
+            <div className="terraCard__menuLead">
+              <span className="terraCard__menuLeadIcon">
+                <TerraIcon category="menu" name="transaksi" size={24} />
+              </span>
+              <span className="terraCard__menuLabel">Menu Name</span>
+            </div>
+            <TerraIcon category="navigation" name="chevron-right" size="sm" className="terraCard__menuArrow" />
+          </div>
+        </div>
+      </section>
+
+      <section className="cardShowcase__group">
+        <div className="cardShowcase__groupHeader">
+          <h4>Information Card</h4>
+          <p>Menandai area yang belum terisi, memberikan petunjuk visual yang jelas untuk konten yang akan datang.</p>
+        </div>
+        <div className="cardShowcase__surface cardShowcase__surface--stacked">
+          <article className="terraCard terraCard--information">
+            <header className="terraCard__header">
+              <div className="terraCard__profile">
+                <img src="/tmp/figma-card-assets/siti-burhan-avatar-56586a.svg" alt="Siti Burhan" className="terraCard__avatarImage" />
+                <div className="terraCard__profileCopy">
+                  <strong>Siti Burhan</strong>
+                  <span>NIK 1111 2222 3333 4444</span>
+                </div>
+              </div>
+              <div className="terraCard__headerMeta">
+                <span className="terraCard__badge">Belum Terdaftar</span>
+                <TerraIcon category="navigation" name="kebab-horizontal" size="sm" />
+              </div>
+            </header>
+            <strong className="terraCard__sectionTitle">Label</strong>
+            <div className="terraCard__infoList">
+              {cardInfoRows.map((row, index) => (
+                <div key={index} className="terraCard__infoRow">
+                  <span>{row.label}</span>
+                  <strong>{row.value}</strong>
+                </div>
+              ))}
+            </div>
+            <TerraButton variant="primary" fullWidth>
+              Button
+            </TerraButton>
+          </article>
+
+          <article className="terraCard terraCard--information">
+            <header className="terraCard__header">
+              <div className="terraCard__profile">
+                <img src="/tmp/figma-card-assets/siti-burhan-avatar-56586a.svg" alt="Siti Burhan" className="terraCard__avatarImage" />
+                <div className="terraCard__profileCopy">
+                  <strong>Siti Burhan</strong>
+                  <span>NIK 1111 2222 3333 4444</span>
+                </div>
+              </div>
+              <div className="terraCard__headerMeta">
+                <span className="terraCard__badge">Belum Terdaftar</span>
+                <TerraIcon category="navigation" name="kebab-horizontal" size="sm" />
+              </div>
+            </header>
+          </article>
+
+          <article className="terraCard terraCard--information terraCard--informationCompact">
+            <strong className="terraCard__sectionTitle">Label</strong>
+            <div className="terraCard__infoList">
+              {cardInfoRows.map((row, index) => (
+                <div key={index} className="terraCard__infoRow">
+                  <span>{row.label}</span>
+                  <strong>{row.value}</strong>
+                </div>
+              ))}
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="cardShowcase__group">
+        <div className="cardShowcase__groupHeader">
+          <h4>Activity Card</h4>
+          <p>Menandai area yang belum terisi, memberikan petunjuk visual yang jelas untuk konten yang akan datang.</p>
+        </div>
+        <div className="cardShowcase__surface">
+          <article className="terraCard terraCard--activity">
+            <header className="terraCard__activityHeader">
+              <span className="terraCard__activityTag">
+                <TerraIcon category="system" name="notification" size={12} />
+                Label Name
+              </span>
+              <TerraIcon category="navigation" name="chevron-right" size="sm" />
+            </header>
+            <div className="terraCard__activityBody">
+              <span className="terraCard__activityName">Input Activity</span>
+              <div className="terraCard__activityTime">
+                <TerraIcon category="system" name="calendar" size={24} />
+                <span>Input Time</span>
+              </div>
+              <button type="button" className="terraCard__activityButton">
+                Atur Jam
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div className="cardShowcase__footer">
+        <img src="/tmp/figma-card-assets/terra-header-logo.svg" alt="TERRA" className="cardShowcase__footerLogoImage" />
+        <div className="cardShowcase__footerRule" />
+        <span>Card</span>
+      </div>
+    </div>
+  );
+}
+
+function asString(value: string | boolean | undefined, fallback: string) {
+  return typeof value === 'string' ? value : fallback;
+}
+
+function asBoolean(value: string | boolean | undefined, fallback = false) {
+  return typeof value === 'boolean' ? value : fallback;
+}
 
 const errorIllustration = (
   <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" width="160" height="160">
