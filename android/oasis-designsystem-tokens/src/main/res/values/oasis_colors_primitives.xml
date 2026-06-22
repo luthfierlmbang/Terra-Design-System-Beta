@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="oasis_orange_500">#F58220</color>
+    <color name="oasis_orange_600">#D86A0E</color>
+    <color name="oasis_yellow_500">#F7BE26</color>
+    <color name="oasis_teal_500">#186D6D</color>
+
+    <!-- Neutrals -->
+    <color name="oasis_neutral_900">#1A1A1A</color>
+    <color name="oasis_neutral_700">#4C4C4C</color>
+    <color name="oasis_neutral_500">#747474</color>
+    <color name="oasis_neutral_300">#C5B8B8</color>
+    <color name="oasis_neutral_200">#E5D9D9</color>
+    <color name="oasis_neutral_100">#F2EEEE</color>
+    <color name="oasis_neutral_50">#FAF8F8</color>
+    <color name="oasis_white">#FFFFFF</color>
+    <color name="oasis_black">#000000</color>
+
+    <!-- Status -->
+    <color name="oasis_success_500">#2E7D32</color>
+    <color name="oasis_warning_500">#ED6C02</color>
+    <color name="oasis_danger_500">#D32F2F</color>
+    <color name="oasis_info_500">#0288D1</color>
+</resources>

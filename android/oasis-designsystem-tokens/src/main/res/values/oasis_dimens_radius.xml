@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="oasis_radius_none">0dp</dimen>
+    <dimen name="oasis_radius_xs">4dp</dimen>
+    <dimen name="oasis_radius_sm">8dp</dimen>
+    <dimen name="oasis_radius_md">12dp</dimen>
+    <dimen name="oasis_radius_pill">999dp</dimen>
+</resources>

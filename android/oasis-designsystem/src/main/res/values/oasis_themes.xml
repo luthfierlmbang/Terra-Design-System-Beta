@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Oasis.Base" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/oasis_primary</item>
+        <item name="colorOnPrimary">@color/oasis_text_on_primary</item>
+        <item name="colorSecondary">@color/oasis_brand_secondary</item>
+        <item name="colorSurface">@color/oasis_surface_default</item>
+        <item name="colorOnSurface">@color/oasis_text_primary</item>
+        <item name="colorError">@color/oasis_feedback_danger</item>
+        <item name="android:statusBarColor">@color/oasis_primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.Oasis" parent="Theme.Oasis.Base"/>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand semantic -->
+    <color name="oasis_primary">@color/oasis_orange_500</color>
+    <color name="oasis_primary_pressed">@color/oasis_orange_600</color>
+    <color name="oasis_accent">@color/oasis_yellow_500</color>
+    <color name="oasis_brand_secondary">@color/oasis_teal_500</color>
+
+    <!-- Text -->
+    <color name="oasis_text_primary">@color/oasis_neutral_900</color>
+    <color name="oasis_text_secondary">@color/oasis_neutral_700</color>
+    <color name="oasis_text_disabled">@color/oasis_neutral_300</color>
+    <color name="oasis_text_inverse">@color/oasis_white</color>
+    <color name="oasis_text_on_primary">@color/oasis_white</color>
+
+    <!-- Surface -->
+    <color name="oasis_surface_default">@color/oasis_white</color>
+    <color name="oasis_surface_subtle">@color/oasis_neutral_50</color>
+    <color name="oasis_surface_disabled">@color/oasis_neutral_100</color>
+
+    <!-- Border -->
+    <color name="oasis_border_default">@color/oasis_neutral_200</color>
+    <color name="oasis_border_strong">@color/oasis_neutral_500</color>
+    <color name="oasis_border_focus">@color/oasis_primary</color>
+    <color name="oasis_border_error">@color/oasis_danger_500</color>
+
+    <!-- Feedback -->
+    <color name="oasis_feedback_success">@color/oasis_success_500</color>
+    <color name="oasis_feedback_warning">@color/oasis_warning_500</color>
+    <color name="oasis_feedback_danger">@color/oasis_danger_500</color>
+    <color name="oasis_feedback_info">@color/oasis_info_500</color>
+</resources>
