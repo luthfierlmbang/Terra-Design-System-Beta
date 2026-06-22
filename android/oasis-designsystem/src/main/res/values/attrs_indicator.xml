@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OasisIndicatorGroup">
+        <attr name="oasisIndicatorCount" format="integer" />
+        <attr name="oasisIndicatorSelectedIndex" format="integer" />
+    </declare-styleable>
+</resources>

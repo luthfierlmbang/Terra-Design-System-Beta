@@ -1,0 +1,11 @@
+package com.oasis.designsystem.bottomnav
+
+import android.content.Context
+import android.util.AttributeSet
+import com.google.android.material.bottomnavigation.BottomNavigationView
+
+class OasisBottomNav @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+) : BottomNavigationView(context, attrs, defStyleAttr)
