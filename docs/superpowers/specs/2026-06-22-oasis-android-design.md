@@ -489,7 +489,7 @@ None. All scope, naming, structure, and ordering decisions confirmed during brai
 - `apps/web-catalog/src/components/oasis/` — Oasis web source (TSX + CSS, 30+ files)
 - `apps/web-catalog/src/content/oasis-registry.tsx` — registry of 24 official components
 - `apps/web-catalog/public/figma-card-assets/oasis-icons/` — SVG icons source of truth
-- `apps/web-catalog/public/figma-card-assets/oasis-illustrations/` — raster illustration source of truth
+- `apps/web-catalog/public/figma-card-assets/oasis-illustration/` — raster illustration source of truth (folder name singular, as it appears in repo)
 - `android/terra-tokens/` — TERRA tablet token module (pattern reference)
 - `android/terra-ui/` — TERRA tablet component library (pattern reference)
 - `android/catalog/` — TERRA tablet catalog app (pattern reference)
