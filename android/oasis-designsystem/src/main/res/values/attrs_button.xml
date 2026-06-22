@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OasisButtonView">
+        <attr name="oasisButtonVariant">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="tertiary" value="2" />
+        </attr>
+        <attr name="oasisButtonSize">
+            <enum name="large" value="0" />
+            <enum name="medium" value="1" />
+            <enum name="small" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
