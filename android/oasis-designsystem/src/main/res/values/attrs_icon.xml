@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OasisIconView">
+        <attr name="oasisIconVariant" format="integer" />
+        <attr name="oasisIconSize">
+            <enum name="size_16" value="0" />
+            <enum name="size_20" value="1" />
+            <enum name="size_24" value="2" />
+            <enum name="size_32" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

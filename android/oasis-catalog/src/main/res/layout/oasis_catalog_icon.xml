@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oasis Icons (84 variants, 24dp)"
+            android:textAppearance="@style/TextAppearance.Oasis.Title"
+            android:layout_marginBottom="16dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="6"
+            android:useDefaultMargins="true">
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="0"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="1"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="2"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="3"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="4"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="5"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="6"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="7"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="8"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="9"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="10"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="11"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="12"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="13"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="14"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="15"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="16"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="17"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="18"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="19"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="20"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="21"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="22"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="23"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="24"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="25"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="26"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="27"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="28"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="29"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="30"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="31"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="32"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="33"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="34"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="35"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="36"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="37"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="38"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="39"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="40"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="41"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="42"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="43"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="44"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="45"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="46"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="47"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="48"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="49"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="50"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="51"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="52"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="53"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="54"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="55"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="56"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="57"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="58"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="59"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="60"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="61"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="62"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="63"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="64"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="65"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="66"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="67"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="68"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="69"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="70"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="71"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="72"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="73"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="74"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="75"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="76"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="77"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="78"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="79"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="80"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="81"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="82"
+                app:oasisIconSize="size_24" />
+
+            <com.oasis.designsystem.icon.OasisIconView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:oasisIconVariant="83"
+                app:oasisIconSize="size_24" />
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
