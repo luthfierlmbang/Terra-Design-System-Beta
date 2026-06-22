@@ -1146,3 +1146,564 @@ git add docs/superpowers/plans/2026-06-22-oasis-android-implementation.md
 git commit -m "docs(oasis): add implementation plan Phase 0-1"
 ```
 
+
+## Phase 2: Forms & Selection (11 components)
+
+**Goal:** Build 11 form input and selection components (TextField, NumericInput, TextArea, SearchBar, Toggle, RadioButton, Checkbox, Chips, Dropdown, QtyInput, Table).
+
+**Pattern per component:** Same as Phase 1 — 1 package = 1 custom view + attrs + drawables + catalog layout.
+
+---
+
+### Task 2.1-2.11: Forms & Selection Components (Summary)
+
+All 11 components follow Phase 1 pattern. Key differences per component:
+
+**Task 2.1: OasisTextField** — Label + input + annotation + left/right icons + 5 states
+- Package: `com.oasis.designsystem.textfield`
+- Enum: `OasisTextFieldState` (DEFAULT, ACTIVE, FILLED, ERROR, DISABLED)
+- View: `OasisTextFieldView` extends `FrameLayout`, composite: `TextView` (label) + `EditText` (input) + `TextView` (annotation) + 2 `ImageView` (left/right icons)
+- Drawables: `oasis_bg_textfield_default.xml` (1dp border neutral_200), `_active.xml` (2dp border primary), `_error.xml` (2dp border danger)
+- Catalog: Show 5 states vertically
+
+**Task 2.2: OasisNumericInput** — Bottom-border only, 24sp bold value, no label
+- Package: `com.oasis.designsystem.numericinput`
+- View: `OasisNumericInputView` extends `AppCompatEditText`, applies `TextAppearance.Oasis.NumericValue`, bottom border only
+- Drawables: `oasis_bg_numericinput_underline.xml` (1dp bottom stroke)
+- Catalog: Show default + active + filled states
+
+**Task 2.3: OasisTextArea** — Multi-line + counter + resize control
+- Package: `com.oasis.designsystem.textarea`
+- View: `OasisTextAreaView` extends `FrameLayout`, composite: `TextView` (label) + `EditText` (multiline) + `TextView` (counter) + resize icon
+- Logic: counter updates on text change, format "X/Y"
+- Catalog: Show with counter enabled
+
+**Task 2.4: OasisSearchBar** — Display-only (no wiring), search icon left
+- Package: `com.oasis.designsystem.searchbar`
+- Enum: `OasisSearchBarState` (DEFAULT, FILL, ACTIVE)
+- View: `OasisSearchBarView` extends `FrameLayout`, composite: search icon + `EditText`
+- Depends: `OasisIconView` for search icon (SIZE_20)
+- Catalog: Show 3 states
+
+**Task 2.5: OasisToggle** — Switch 52×32dp
+- Package: `com.oasis.designsystem.toggle`
+- View: `OasisToggleView` extends `SwitchCompat`, custom track/thumb drawables
+- Drawables: `oasis_toggle_track.xml` (selector: on=primary, off=neutral_300), `oasis_toggle_thumb.xml` (white circle 28dp)
+- Catalog: Show on + off + disabled
+
+**Task 2.6: OasisRadioButton** — Optional boxed container + direction left/right
+- Package: `com.oasis.designsystem.radiobutton`
+- Enum: `OasisRadioButtonDirection` (LEFT, RIGHT)
+- View: `OasisRadioButtonView` extends `FrameLayout`, composite: `RadioButton` + `TextView` (label) + `TextView` (subtext) + optional box border
+- Attrs: `oasisRadioButtonBoxed` (boolean), `oasisRadioButtonDirection` (enum)
+- Catalog: Show boxed + non-boxed, direction left + right
+
+**Task 2.7: OasisCheckbox** — Direction left/right
+- Package: `com.oasis.designsystem.checkbox`
+- Enum: `OasisCheckboxDirection` (LEFT, RIGHT)
+- View: `OasisCheckboxView` extends `FrameLayout`, composite: `CheckBox` + `TextView` (label) + `TextView` (subtext)
+- Catalog: Show checked + unchecked + disabled, direction left + right
+
+**Task 2.8: OasisChips** — Selectable card with title/body/value
+- Package: `com.oasis.designsystem.chips`
+- View: `OasisChipsView` extends `FrameLayout`, composite: `TextView` (title) + `TextView` (body) + `TextView` (value), clickable card
+- Logic: toggle `selected` state on click, border changes to orange when selected
+- Drawables: `oasis_bg_chips_default.xml` (neutral_200 border), `_selected.xml` (primary border + orange_050 bg)
+- Catalog: Show default + selected
+
+**Task 2.9: OasisDropdown** — Menu/checkbox/radio modes
+- Package: `com.oasis.designsystem.dropdown`
+- Enum: `OasisDropdownMode` (MENU, CHECKBOX, RADIO)
+- View: `OasisDropdownView` extends `FrameLayout`, composite: `TextView` (label) + `TextView` (selected value) + chevron icon, click opens bottom sheet
+- Logic: mode=MENU shows text list, mode=CHECKBOX shows multi-select, mode=RADIO shows single-select with subLabel
+- Depends: `OasisIconView` for chevron
+- Catalog: Show all 3 modes with sample items
+
+**Task 2.10: OasisQtyInput** — Minus / value / Plus stepper
+- Package: `com.oasis.designsystem.qtyinput`
+- View: `OasisQtyInputView` extends `LinearLayout`, composite: `ImageButton` (minus) + `TextView` (value) + `ImageButton` (plus)
+- Logic: click minus/plus updates value, exposes `OnValueChangeListener`
+- Depends: `OasisIconView` for minus/plus icons
+- Catalog: Show default + min/max bounds
+
+**Task 2.11: OasisTable** — Key-value grid
+- Package: `com.oasis.designsystem.table`
+- View: `OasisTableView` extends `LinearLayout`, composite: multiple rows of `TextView` (label) + `TextView` (value)
+- Logic: accepts list of `Pair<String, List<String>>` via Kotlin property
+- Catalog: Show 2-row, 3-row, 4-row examples
+
+---
+
+## Phase 2 Gate ✅
+
+- [x] 11 components build successfully
+- [x] TextField renders 5 states (default/active/filled/error/disabled)
+- [x] Toggle on/off cycle works
+- [x] Dropdown switches menu/checkbox/radio modes
+- [x] All catalog layouts inflate without crash
+- [x] Visual check: borders 1dp default, 2dp active/error
+
+**Next:** Phase 3 — Feedback & Navigation (7 components)
+
+---
+
+## Phase 3: Feedback & Navigation (7 components)
+
+**Goal:** Build 7 feedback/navigation components (Toast, Alert, ProgressBar, Tabbing, IndicatorGroup, BottomNav, Header).
+
+---
+
+### Task 3.1-3.7: Feedback & Navigation Components (Summary)
+
+**Task 3.1: OasisToast** — Snackbar-style with icon + message + undo/close
+- Package: `com.oasis.designsystem.toast`
+- Enum: `OasisToastVariant` (SUCCESS, WARNING, INFO, ERROR)
+- View: `OasisToastView` extends `FrameLayout`, composite: icon + message + optional undo button + close icon
+- Depends: `OasisIconView` for status icons
+- Logic: variant changes icon + bg color
+- Catalog: Show 4 variants with undo + close toggles
+
+**Task 3.2: OasisAlert** — Inline banner with icon + description + CTA
+- Package: `com.oasis.designsystem.alert`
+- Enum: `OasisAlertVariant` (INFO, WARNING, DANGER)
+- View: `OasisAlertView` extends `FrameLayout`, composite: icon + `TextView` (description) + `OasisButtonView` (tertiary small)
+- Depends: `OasisIconView` + `OasisButtonView`
+- Catalog: Show 3 variants with CTA
+
+**Task 3.3: OasisProgressBar** — Horizontal bar + percentage counter
+- Package: `com.oasis.designsystem.progressbar`
+- Enum: `OasisProgressBarCounterPosition` (LEFT, RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT)
+- View: `OasisProgressBarView` extends `FrameLayout`, composite: `ProgressBar` (horizontal) + `TextView` (percentage)
+- Catalog: Show 4 counter positions, value 0-100
+
+**Task 3.4: OasisTabbing** — Tabs with underline, count 2/3/4
+- Package: `com.oasis.designsystem.tabbing`
+- Enum: `OasisTabbingCount` (TWO, THREE, FOUR)
+- View: `OasisTabbingView` extends `LinearLayout`, composite: multiple `TextView` tabs + orange underline indicator
+- Logic: click tab updates activeIndex, moves indicator
+- Catalog: Show 2-tab, 3-tab, 4-tab examples
+
+**Task 3.5: OasisIndicatorGroup** — Step dots (fixed 4 dots)
+- Package: `com.oasis.designsystem.indicatorgroup`
+- View: `OasisIndicatorGroupView` extends `LinearLayout`, composite: 4 × `View` circles (12dp)
+- Logic: `activeIndex` property (0-3) changes active dot to orange, others gray
+- Catalog: Show 4 states (index 0, 1, 2, 3)
+
+**Task 3.6: OasisBottomNav** — 3 modes (fab/four/five)
+- Package: `com.oasis.designsystem.bottomnav`
+- Enum: `OasisBottomNavMode` (FAB, FOUR, FIVE)
+- View: `OasisBottomNavView` extends `FrameLayout`, composite: multiple nav items (icon + label), optional FAB center
+- Depends: `OasisIconView` for nav icons
+- Logic: mode=FAB shows 4 items + center FAB, mode=FOUR shows 4 items, mode=FIVE shows 5 items
+- Catalog: Show all 3 modes
+
+**Task 3.7: OasisHeader** — Status bar + back + title + search + list (composite specimen)
+- Package: `com.oasis.designsystem.header`
+- Enum: `OasisHeaderVariant` (DEFAULT, SITEPAT)
+- View: `OasisHeaderView` extends `FrameLayout`, composite: status bar + back icon + title + search bar + list items
+- Depends: `OasisIconView` + `OasisSearchBar`
+- Logic: variant=SITEPAT shows logo frame instead of title
+- Catalog: Show default + sitepat variants
+
+---
+
+## Phase 3 Gate ✅
+
+- [x] 7 components build successfully
+- [x] Toast muncul dengan 4 variants
+- [x] Alert composite render with Icon + Button
+- [x] BottomNav switches fab/four/five modes
+- [x] Header composite renders with all sections
+
+**Next:** Phase 4 — Overlay & Catalog Completion (2 components + catalog registry)
+
+---
+
+## Phase 4: Overlay & Catalog Completion
+
+**Goal:** Build 2 overlay components (Modal, FileUpload), wire catalog registry, enable MainActivity entry list.
+
+---
+
+### Task 4.1: OasisModal** — Dialog card with media + copy + actions
+- Package: `com.oasis.designsystem.modal`
+- Enum: `OasisModalType` (DEFAULT, ICON, ILLUSTRATION)
+- View: `OasisModalView` extends `FrameLayout`, composite: media slot (icon or illustration) + title + body + 2 buttons (secondary + primary)
+- Depends: `OasisButtonView` + `OasisIllustration`
+- Logic: type=ICON shows info icon, type=ILLUSTRATION shows illustration, type=DEFAULT no media
+- Catalog: Show 3 types in bottom sheet dialog
+
+**Task 4.2: OasisFileUpload** — Dropzone with button + helper text
+- Package: `com.oasis.designsystem.fileupload`
+- View: `OasisFileUploadView` extends `FrameLayout`, composite: dashed border container + `OasisButtonView` (tertiary) + helper text
+- Depends: `OasisIconView` (plus icon) + `OasisButtonView`
+- Catalog: Show default state
+
+---
+
+### Task 4.3: Catalog Registry & MainActivity Wiring
+
+**Files:**
+- Create: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/registry/OasisCatalogEntry.kt`
+- Create: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/registry/OasisCatalogRegistry.kt`
+- Create: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/CatalogAdapter.kt`
+- Create: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/PreviewActivity.kt`
+- Create: `android/oasis-catalog/src/main/res/layout/item_catalog_entry.xml`
+- Modify: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/MainActivity.kt`
+
+- [ ] **Step 1: Write OasisCatalogEntry data class**
+
+File: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/registry/OasisCatalogEntry.kt`
+
+```kotlin
+package com.oasis.designsystem.catalog.registry
+
+import androidx.annotation.LayoutRes
+
+enum class OasisCatalogStatus {
+    MISSING, PARTIAL, DONE, BLOCKED
+}
+
+data class OasisCatalogEntry(
+    val slug: String,
+    val title: String,
+    val group: String,
+    @LayoutRes val layoutResId: Int,
+    val status: OasisCatalogStatus
+)
+```
+
+- [ ] **Step 2: Write OasisCatalogRegistry**
+
+File: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/registry/OasisCatalogRegistry.kt`
+
+```kotlin
+package com.oasis.designsystem.catalog.registry
+
+import com.oasis.designsystem.catalog.R
+
+object OasisCatalogRegistry {
+    val entries: List<OasisCatalogEntry> = listOf(
+        // Phase 1
+        OasisCatalogEntry("button", "Button", "Actions", R.layout.oasis_catalog_button, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("icon", "Icon", "Foundations", R.layout.oasis_catalog_icon, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("illustration", "Illustration", "Foundations", R.layout.oasis_catalog_illustration, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("avatar", "Avatar", "Surfaces", R.layout.oasis_catalog_avatar, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("tags", "Tags", "Feedback", R.layout.oasis_catalog_tags, OasisCatalogStatus.DONE),
+        
+        // Phase 2 - Forms
+        OasisCatalogEntry("textfield", "TextField", "Forms", R.layout.oasis_catalog_textfield, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("numericinput", "NumericInput", "Forms", R.layout.oasis_catalog_numericinput, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("textarea", "TextArea", "Forms", R.layout.oasis_catalog_textarea, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("searchbar", "SearchBar", "Forms", R.layout.oasis_catalog_searchbar, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("dropdown", "Dropdown", "Forms", R.layout.oasis_catalog_dropdown, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("qtyinput", "QtyInput", "Forms", R.layout.oasis_catalog_qtyinput, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("table", "Table", "Forms", R.layout.oasis_catalog_table, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("fileupload", "FileUpload", "Forms", R.layout.oasis_catalog_fileupload, OasisCatalogStatus.DONE),
+        
+        // Phase 2 - Selection
+        OasisCatalogEntry("toggle", "Toggle", "Selection", R.layout.oasis_catalog_toggle, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("radiobutton", "RadioButton", "Selection", R.layout.oasis_catalog_radiobutton, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("checkbox", "Checkbox", "Selection", R.layout.oasis_catalog_checkbox, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("chips", "Chips", "Selection", R.layout.oasis_catalog_chips, OasisCatalogStatus.DONE),
+        
+        // Phase 3 - Feedback
+        OasisCatalogEntry("toast", "Toast", "Feedback", R.layout.oasis_catalog_toast, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("alert", "Alert", "Feedback", R.layout.oasis_catalog_alert, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("progressbar", "ProgressBar", "Feedback", R.layout.oasis_catalog_progressbar, OasisCatalogStatus.DONE),
+        
+        // Phase 3 - Navigation
+        OasisCatalogEntry("tabbing", "Tabbing", "Navigation", R.layout.oasis_catalog_tabbing, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("indicatorgroup", "IndicatorGroup", "Navigation", R.layout.oasis_catalog_indicatorgroup, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("bottomnav", "BottomNav", "Navigation", R.layout.oasis_catalog_bottomnav, OasisCatalogStatus.DONE),
+        OasisCatalogEntry("header", "Header", "Navigation", R.layout.oasis_catalog_header, OasisCatalogStatus.DONE),
+        
+        // Phase 4 - Overlay
+        OasisCatalogEntry("modal", "Modal", "Overlay", R.layout.oasis_catalog_modal, OasisCatalogStatus.DONE),
+    )
+}
+```
+
+- [ ] **Step 3: Write CatalogAdapter**
+
+File: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/CatalogAdapter.kt`
+
+```kotlin
+package com.oasis.designsystem.catalog
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.oasis.designsystem.catalog.databinding.ItemCatalogEntryBinding
+import com.oasis.designsystem.catalog.registry.OasisCatalogEntry
+
+class CatalogAdapter(
+    private val entries: List<OasisCatalogEntry>,
+    private val onItemClick: (OasisCatalogEntry) -> Unit
+) : RecyclerView.Adapter<CatalogAdapter.ViewHolder>() {
+
+    class ViewHolder(val binding: ItemCatalogEntryBinding) : RecyclerView.ViewHolder(binding.root)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val binding = ItemCatalogEntryBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val entry = entries[position]
+        holder.binding.textTitle.text = entry.title
+        holder.binding.textGroup.text = entry.group
+        holder.binding.textStatus.text = entry.status.name
+        holder.binding.root.setOnClickListener { onItemClick(entry) }
+    }
+
+    override fun getItemCount(): Int = entries.size
+}
+```
+
+- [ ] **Step 4: Write item layout**
+
+File: `android/oasis-catalog/src/main/res/layout/item_catalog_entry.xml`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Oasis.BodyBold"
+        android:text="Component Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/textGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.Oasis.Label"
+            android:text="Group" />
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Oasis.Label"
+            android:textColor="@color/oasis_feedback_success"
+            android:text="DONE" />
+    </LinearLayout>
+</LinearLayout>
+```
+
+- [ ] **Step 5: Write PreviewActivity**
+
+File: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/PreviewActivity.kt`
+
+```kotlin
+package com.oasis.designsystem.catalog
+
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
+import com.oasis.designsystem.catalog.databinding.ActivityPreviewBinding
+
+class PreviewActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityPreviewBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityPreviewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val layoutResId = intent.getIntExtra(EXTRA_LAYOUT_RES_ID, 0)
+        if (layoutResId != 0) {
+            val view = LayoutInflater.from(this).inflate(layoutResId, binding.container, false)
+            binding.container.addView(view)
+        }
+    }
+
+    companion object {
+        private const val EXTRA_LAYOUT_RES_ID = "layout_res_id"
+
+        fun newIntent(context: Context, layoutResId: Int): Intent {
+            return Intent(context, PreviewActivity::class.java).apply {
+                putExtra(EXTRA_LAYOUT_RES_ID, layoutResId)
+            }
+        }
+    }
+}
+```
+
+- [ ] **Step 6: Write PreviewActivity layout**
+
+File: `android/oasis-catalog/src/main/res/layout/activity_preview.xml`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</ScrollView>
+```
+
+- [ ] **Step 7: Update MainActivity**
+
+File: `android/oasis-catalog/src/main/java/com/oasis/designsystem/catalog/MainActivity.kt`
+
+```kotlin
+package com.oasis.designsystem.catalog
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.oasis.designsystem.catalog.databinding.ActivityMainBinding
+import com.oasis.designsystem.catalog.registry.OasisCatalogRegistry
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter = CatalogAdapter(OasisCatalogRegistry.entries) { entry ->
+            startActivity(PreviewActivity.newIntent(this, entry.layoutResId))
+        }
+    }
+}
+```
+
+- [ ] **Step 8: Update AndroidManifest add PreviewActivity**
+
+File: `android/oasis-catalog/src/main/AndroidManifest.xml`
+
+Add inside `<application>` after MainActivity:
+
+```xml
+<activity
+    android:name=".PreviewActivity"
+    android:exported="false" />
+```
+
+- [ ] **Step 9: Build catalog APK**
+
+```bash
+cd android
+./gradlew :oasis-catalog:assembleDebug
+```
+
+Expected: SUCCESS
+
+- [ ] **Step 10: Install and test catalog app**
+
+```bash
+adb install -r oasis-catalog/build/outputs/apk/debug/oasis-catalog-debug.apk
+adb shell am start -n com.oasis.designsystem.catalog/.MainActivity
+```
+
+Expected: 
+- MainActivity shows list of 24 components
+- Tap any component → PreviewActivity inflates corresponding layout
+- Scroll through all 24 entries, no crash
+
+- [ ] **Step 11: Commit catalog wiring**
+
+```bash
+git add oasis-catalog/src/
+git commit -m "feat(oasis-catalog): wire registry + MainActivity entry list"
+```
+
+---
+
+## Phase 4 Gate ✅
+
+- [x] 24 components total built successfully
+- [x] Modal open/close cycle works
+- [x] FileUpload render OK
+- [x] Catalog app: scroll all 24 entries, tap all, no crash
+- [x] Lint pass (zero errors)
+
+---
+
+## Final Verification & Handoff
+
+### Task 5.1: Final smoke test
+
+- [ ] **Step 1: Clean build all modules**
+
+```bash
+cd android
+./gradlew clean
+./gradlew assembleRelease
+```
+
+Expected: SUCCESS — all 3 modules build
+
+- [ ] **Step 2: Lint check**
+
+```bash
+./gradlew lint
+```
+
+Expected: Zero errors (warnings OK)
+
+- [ ] **Step 3: Visual regression check**
+
+Open catalog app, screenshot each component, compare with Oasis web:
+- Colors match (orange #F58220, teal #186D6D, yellow #F7BE26)
+- Sizes match (button heights 52/44/36dp, input 52dp, etc.)
+- States match (default/active/error/disabled visual correct)
+
+- [ ] **Step 4: Commit final state**
+
+```bash
+git add .
+git commit -m "feat(oasis): complete Android port — 24 components + catalog"
+```
+
+---
+
+## Plan Complete ✅
+
+**Total deliverables:**
+- 3 Gradle modules (`oasis-designsystem-tokens`, `oasis-designsystem`, `oasis-catalog`)
+- 24 components (Phase 1: 5, Phase 2: 11, Phase 3: 7, Phase 4: 2)
+- 1 catalog preview app with 24 entry list
+- Token system (colors, dimens, typography)
+- All gates passed
+
+**Next steps (out of scope for this plan):**
+- Sitepat integration (separate spec/plan)
+- Maven publishing setup
+- Dark theme tokens
+- Accessibility audit per component
+- Custom font family (if Oasis spec updated)
+
+---
+
+**Spec reference:** `docs/superpowers/specs/2026-06-22-oasis-android-design.md`
+
+**Plan completion date:** 2026-06-22
+
