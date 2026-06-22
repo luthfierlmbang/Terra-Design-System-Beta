@@ -9,15 +9,17 @@
 
 ## 1. Background
 
-TERRA is a multi-form-factor design system. It already ships **TERRA Tablet** — a native Android library (Kotlin + XML) for tablet apps, organized as three Gradle modules under `android/`:
+TERRA is the **tablet design system** used by the company's tablet product. It already ships a native Android library (Kotlin + XML) for tablet apps, organized as three Gradle modules under `android/`:
 
 - `terra-tokens` — colors, dimens, typography
 - `terra-ui` — 23 custom view components
 - `catalog` — preview app
 
-Oasis is the **mobile (phone) variant** of the design system. Today it exists only as **web components** (React + TypeScript + CSS) under `apps/web-catalog/src/components/oasis/`. There is no Android source for it.
+**Oasis is the mobile (phone) design system** — the sibling design system for the **Sitepat** mobile application. Today Oasis exists only as **web components** (React + TypeScript + CSS) under `apps/web-catalog/src/components/oasis/`. There is no Android source for it.
 
-This spec defines the port: ship an **Oasis Android library** that mirrors the Oasis web catalog's 24 documented components as native Android custom views, in a **fully federated Gradle module** that does not touch the existing TERRA tablet code.
+**Sitepat** is the consumer mobile app — the production app that will eventually import the Oasis Android library built by this spec. Sitepat itself is out of scope for this spec; this spec only delivers the **Oasis Android design system library** (and its catalog preview app) that Sitepat will consume.
+
+This spec defines the port: ship an **Oasis Android design system library** that mirrors the Oasis web catalog's 24 documented components as native Android custom views, in a **fully federated Gradle module** that does not touch the existing TERRA tablet code.
 
 ## 2. Goals
 
@@ -26,6 +28,7 @@ This spec defines the port: ship an **Oasis Android library** that mirrors the O
 3. Keep TERRA tablet and Oasis mobile **fully independent** — no shared modules, no shared resources, no shared Kotlin packages.
 4. Follow the **same per-component recipe** TERRA tablet already uses, so contributors familiar with TERRA have zero learning curve.
 5. Ship a **catalog preview app** that mirrors the web catalog's role.
+6. Produce a library that the **Sitepat** mobile app can import as a local Gradle module (and later as a Maven artifact if published).
 
 ## 3. Non-Goals (explicit out-of-scope for v1)
 
@@ -38,6 +41,7 @@ This spec defines the port: ship an **Oasis Android library** that mirrors the O
 | Unit tests / instrumentation tests | TERRA tablet follows manual validation; same philosophy |
 | Maven publishing | v1 ships as local Gradle modules; publish later if needed |
 | Accessibility audit | Default Android lint only for v1; full a11y pass in a later round |
+| **Sitepat mobile app integration** | This spec delivers the Oasis design system library only. Sitepat (the consumer mobile app) is a separate codebase; its integration with Oasis Android is a separate concern. |
 
 ## 4. Architecture
 
@@ -77,8 +81,8 @@ All components live under Kotlin package `com.oasis.designsystem.<component>` �
 
 ### 4.4 Why federated (not sub-packages inside TERRA)
 
-- TERRA tablet and Oasis mobile have different form factors, layouts, and audiences
-- Federated modules can be published to Maven independently if needed later
+- TERRA tablet and Oasis mobile are **separate design systems** for **separate apps** (TERRA's tablet product vs Sitepat, the mobile consumer)
+- Federated modules can be published to Maven independently if Sitepat or other mobile apps need to consume Oasis Android externally
 - Catalog app stays single-purpose (no mixing tablet + mobile in one preview)
 - Federation enforces the architectural rule "one design system = one module" — the same rule TERRA tablet already follows
 
@@ -352,7 +356,7 @@ If these are later needed, they go into a separate spec as **screen specimens** 
 
 ### 8.1 Purpose
 
-Preview app for designers and Android developers to validate each component's look and behavior in a real Android environment, without integrating into an external app.
+Preview app for **Sitepat** developers (and any other consumer) to validate each component's look and behavior in a real Android environment, without integrating into a full consumer app.
 
 ### 8.2 Structure
 
@@ -464,6 +468,7 @@ Recorded for follow-up, not part of v1 scope:
 | Maven publishing setup | When Oasis Android is consumed by external apps |
 | Per-component accessibility audit | Before external consumers adopt |
 | Auto-generated component docs site | If community contribution grows |
+| **Sitepat integration (separate codebase)** | When Sitepat imports Oasis Android as a dependency — separate concern, separate spec |
 
 ---
 
