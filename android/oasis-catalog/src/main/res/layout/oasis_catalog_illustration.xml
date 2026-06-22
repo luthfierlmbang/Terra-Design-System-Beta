@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oasis Illustrations (14)"
+            android:textAppearance="@style/TextAppearance.Oasis.Title"
+            android:layout_marginBottom="16dp" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="0" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="activation" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="1" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="agree" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="2" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="connection_problem" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="3" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="failure_1" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="4" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="failure_2" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="5" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="introducing" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="6" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="not_found" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="7" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="otp" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="8" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="pin" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="9" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="splash_campaign" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="10" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="success_1" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="11" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="success_2" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="12" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="top_up_limit" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+        <com.oasis.designsystem.illustration.OasisIllustrationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:oasisIllustrationVariant="13" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="welcome" android:textAppearance="@style/TextAppearance.Oasis.Label" />
+
+    </LinearLayout>
+</ScrollView>
