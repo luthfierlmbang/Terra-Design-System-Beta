@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="OasisModalView">
-        <attr name="oasisModalTitle" format="string" />
-        <attr name="oasisModalMessage" format="string" />
-        <attr name="oasisModalPrimaryText" format="string" />
-        <attr name="oasisModalSecondaryText" format="string" />
-    </declare-styleable>
-</resources>

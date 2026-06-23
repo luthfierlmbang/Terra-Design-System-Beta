@@ -2,6 +2,20 @@ import type { ReactNode } from 'react';
 
 export type Platform = 'Web' | 'Android' | 'Web + Android';
 
+export type ComponentGroup =
+  | 'Foundations'
+  | 'Actions'
+  | 'Selection'
+  | 'Forms'
+  | 'Feedback'
+  | 'Navigation'
+  | 'Overlay';
+
+export type CategoryMeta = {
+  title: string;
+  description: string;
+};
+
 export type PropRow = {
   name: string;
   type: string;
@@ -19,15 +33,6 @@ export type DemoState = {
   description: string;
   demo?: ReactNode;
 };
-
-export type ComponentGroup =
-  | 'Foundations'
-  | 'Actions'
-  | 'Selection'
-  | 'Forms'
-  | 'Feedback'
-  | 'Navigation'
-  | 'Overlay';
 
 export type AndroidSnippetBlock = {
   language: 'xml' | 'kotlin';
@@ -48,6 +53,10 @@ export type DocEntry = {
   platform: Platform;
   /** Short one-line summary shown in nav + page header. */
   description: string;
+  /** Category shown on overview cards. */
+  category?: string;
+  /** Search terms used by the catalog sidebar. */
+  keywords?: string[];
   /** Live specimen, rendered inside a tablet frame. */
   demo: ReactNode;
   /** How the demo should sit on the tablet surface. */
@@ -57,6 +66,10 @@ export type DocEntry = {
   anatomy?: AnatomyPart[];
   props?: PropRow[];
   states?: DemoState[];
+  guidance?: {
+    summary?: string;
+    usage?: string;
+  };
   androidSnippet: AndroidSnippet;
   usage?: {
     do: string[];

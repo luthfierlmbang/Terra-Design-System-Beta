@@ -3,7 +3,7 @@
 .terraStepper {
   display: inline-flex;
   align-items: flex-start;
-  gap: var(--spacing-4);
+  gap: 4px;
 }
 
 .terraStepper__step {
@@ -19,53 +19,70 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-4);
+  padding: 4px;
   width: 100%;
 }
 
 .terraStepper__bullet {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-pill);
+  border-radius: 999px;
   flex-shrink: 0;
 }
 
-.terraStepper__bullet--inactive {
-  background: var(--color-border-secondary-default);
-  padding: var(--spacing-8) 10px;
-}
-
-.terraStepper__bullet--progress {
-  background: var(--color-bg-fill-primary-default);
-  padding: var(--spacing-8) 10px;
+.terraStepper__bullet--inactive,
+.terraStepper__bullet--progress,
+.terraStepper__bullet--error {
+  padding: 8px 10px;
 }
 
 .terraStepper__bullet--complete {
-  background: var(--color-bg-fill-success-default);
-  padding: var(--spacing-8);
+  padding: 8px;
+}
+
+.terraStepper__bullet--inactive {
+  background: #cccccc;
+}
+
+.terraStepper__bullet--progress {
+  background: #f4831f;
+}
+
+.terraStepper__bullet--complete {
+  background: #00c781;
+}
+
+.terraStepper__bullet--error {
+  background: #ef3636;
 }
 
 .terraStepper__bullet-number {
+  width: 20px;
+  color: #ffffff;
+  font-family: 'Jenius Sans', inherit;
   font-size: 16px;
+  font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  color: var(--color-text-inverse-default);
-  width: 20px;
+  letter-spacing: 0.0032em;
   text-align: center;
 }
 
 .terraStepper__caption {
-  font-size: 12px;
-  line-height: 20px;
-  color: var(--color-text-primary-default);
-  text-align: center;
   width: 100%;
+  color: #333333;
+  font-family: 'Jenius Sans', inherit;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
   word-break: break-word;
 }
 
 .terraStepper__connector {
-  flex: 1 0 4px;
+  flex: 1 0 64px;
   align-self: stretch;
   display: flex;
   flex-direction: column;
@@ -73,19 +90,19 @@
 }
 
 .terraStepper__line {
+  width: 64px;
   height: 4px;
-  width: 100%;
-  border-radius: var(--radius-pill);
+  border-radius: 999px;
 }
 
 .terraStepper__line--inactive {
-  background: var(--color-border-secondary-default);
+  background: #cccccc;
 }
 
 .terraStepper__line--progress {
-  background: var(--color-bg-fill-primary-default);
+  background: #f4831f;
 }
 
 .terraStepper__line--complete {
-  background: var(--color-bg-fill-success-default);
+  background: #00c781;
 }

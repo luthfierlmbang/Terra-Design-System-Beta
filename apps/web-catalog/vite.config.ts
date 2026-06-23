@@ -3,4 +3,19 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    target: 'es2019',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'es2019',
+    },
+  },
 });

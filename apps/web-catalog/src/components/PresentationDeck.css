@@ -1,0 +1,588 @@
+.presentationDeck {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background:
+    radial-gradient(circle at top left, rgba(2, 116, 121, 0.14), transparent 32%),
+    linear-gradient(180deg, #f8fbfd 0%, #eef4f8 100%);
+  color: var(--docs-heading);
+}
+
+.presentationDeck__topbar,
+.presentationDeck__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 28px;
+}
+
+.presentationDeck__topbar {
+  border-bottom: 1px solid rgba(23, 32, 51, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.presentationDeck__brand {
+  display: grid;
+  gap: 10px;
+}
+
+.presentationDeck__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(2, 116, 121, 0.1);
+  color: var(--shell-accent);
+  font-size: var(--type-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.presentationDeck__brand h1,
+.presentationDeck__brand p,
+.presentationDeck__meta,
+.presentationDeck__counter span,
+.presentationDeck__footer p,
+.presentationSlide__header,
+.presentationSlide__content,
+.presentationSlide__bulletList,
+.presentationSlide__stepList,
+.presentationSlide__notes,
+.presentationSlide__mapping,
+.presentationSlide__benefitGrid {
+  margin: 0;
+}
+
+.presentationDeck__brand h1 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.1;
+}
+
+.presentationDeck__brand p {
+  max-width: 720px;
+  color: var(--docs-text-soft);
+  font-size: var(--type-md);
+  line-height: 1.6;
+}
+
+.presentationDeck__meta {
+  display: grid;
+  gap: 12px;
+  min-width: 280px;
+}
+
+.presentationDeck__counter {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}
+
+.presentationDeck__counter strong {
+  font-size: var(--type-3xl);
+}
+
+.presentationDeck__counter span,
+.presentationDeck__footer p,
+.presentationDeck__rail-copy small,
+.presentationSlide__subtitle,
+.presentationSlide__summary,
+.presentationSlide__notes p,
+.presentationSlide__mappingRow span,
+.presentationSlide__flow-item span {
+  color: var(--docs-text-soft);
+}
+
+.presentationDeck__progress {
+  width: 100%;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(23, 32, 51, 0.08);
+}
+
+.presentationDeck__progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0f8c91 0%, #5dc6ca 100%);
+}
+
+.presentationDeck__body {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  min-height: 0;
+}
+
+.presentationDeck__rail {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 20px;
+  overflow: auto;
+  border-right: 1px solid rgba(23, 32, 51, 0.08);
+  background: rgba(250, 252, 253, 0.9);
+}
+
+.presentationDeck__rail-link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  color: inherit;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.68);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.presentationDeck__rail-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(2, 116, 121, 0.16);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.presentationDeck__rail-link.is-active {
+  border-color: rgba(2, 116, 121, 0.22);
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.presentationDeck__rail-index,
+.presentationSlide__ordinal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(2, 116, 121, 0.08);
+  color: var(--shell-accent);
+  font-weight: 800;
+}
+
+.presentationDeck__rail-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.presentationDeck__rail-copy strong {
+  font-size: var(--type-md);
+  line-height: 1.45;
+}
+
+.presentationDeck__stage {
+  min-width: 0;
+  padding: 24px;
+}
+
+.presentationSlide {
+  height: 100%;
+}
+
+.presentationSlide__frame {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 22px;
+  min-height: calc(100vh - 184px);
+  padding: 28px;
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.08);
+}
+
+.presentationSlide__header {
+  display: grid;
+  gap: 14px;
+}
+
+.presentationSlide__eyebrowRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.presentationSlide__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--docs-heading);
+  font-size: var(--type-sm);
+  font-weight: 700;
+}
+
+.presentationSlide__title {
+  margin: 0;
+  max-width: 1040px;
+  font-size: clamp(34px, 4.2vw, 58px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.presentationSlide__subtitle,
+.presentationSlide__summary {
+  max-width: 920px;
+  font-size: clamp(16px, 1.5vw, 20px);
+  line-height: 1.7;
+}
+
+.presentationSlide__summary {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(2, 116, 121, 0.07);
+  color: var(--docs-heading);
+}
+
+.presentationSlide__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  min-height: 0;
+}
+
+.presentationSlide__grid,
+.presentationSlide__stack,
+.presentationSlide__closing {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.presentationSlide__grid--mainAside {
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+}
+
+.presentationSlide__grid--halves {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.presentationSlide__panel,
+.presentationSlide__mapping,
+.presentationSlide__benefitCard,
+.presentationSlide__notes,
+.presentationSlide__stepList li,
+.presentationSlide__stackNode,
+.presentationSlide__flow,
+.presentationSlide__flow-item {
+  border: 1px solid rgba(23, 32, 51, 0.08);
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.presentationSlide__panel {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+}
+
+.presentationSlide__panel h3,
+.presentationSlide__notes span {
+  margin: 0;
+  font-size: var(--type-lg);
+  font-weight: 800;
+  color: var(--docs-heading);
+}
+
+.presentationSlide__panel--hero {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #f9fcfe 100%);
+}
+
+.presentationSlide__panel--accent,
+.presentationSlide__panel--highlight,
+.presentationSlide__panel--diagram {
+  background: linear-gradient(180deg, rgba(2, 116, 121, 0.08) 0%, rgba(2, 116, 121, 0.03) 100%);
+}
+
+.presentationSlide__panel--muted {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.04) 0%, rgba(15, 23, 42, 0.02) 100%);
+}
+
+.presentationSlide__bulletList,
+.presentationSlide__stepList {
+  padding: 0;
+  list-style: none;
+}
+
+.presentationSlide__bulletList {
+  display: grid;
+  gap: 14px;
+}
+
+.presentationSlide__bulletList li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--docs-heading);
+  font-size: clamp(16px, 1.45vw, 20px);
+  line-height: 1.7;
+}
+
+.presentationSlide__bulletList li::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--shell-accent);
+}
+
+.presentationSlide__bulletList--large li {
+  font-size: clamp(18px, 1.8vw, 24px);
+}
+
+.presentationSlide__stepList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.presentationSlide__stepList li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+  padding: 18px 20px;
+}
+
+.presentationSlide__stepList li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(2, 116, 121, 0.1);
+  color: var(--shell-accent);
+  font-weight: 800;
+}
+
+.presentationSlide__stepList li p {
+  margin: 0;
+  color: var(--docs-heading);
+  font-size: var(--type-lg);
+  line-height: 1.65;
+}
+
+.presentationSlide__notes {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.98) 100%);
+}
+
+.presentationSlide__notes span {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  align-items: center;
+  font-size: var(--type-sm);
+}
+
+.presentationSlide__notes p {
+  font-size: var(--type-md);
+  line-height: 1.7;
+}
+
+.presentationSlide__mapping {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.presentationSlide__mappingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(2, 116, 121, 0.06);
+}
+
+.presentationSlide__mappingRow strong {
+  color: var(--shell-accent);
+  font-size: var(--type-lg);
+}
+
+.presentationSlide__stackNodes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.presentationSlide__stackNode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+}
+
+.presentationSlide__stackNode strong,
+.presentationSlide__flow-item strong,
+.presentationSlide__benefitCard strong {
+  font-size: var(--type-lg);
+  color: var(--docs-heading);
+}
+
+.presentationSlide__stackNode span,
+.presentationSlide__flow-arrow {
+  color: var(--shell-accent);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.presentationSlide__flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px;
+}
+
+.presentationSlide__flow-item {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  align-content: center;
+  min-height: 128px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #f9fcfe 100%);
+}
+
+.presentationSlide__flow-item span {
+  text-align: center;
+  font-size: var(--type-lg);
+  line-height: 1.5;
+}
+
+.presentationSlide__benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.presentationSlide__benefitCard {
+  display: grid;
+  align-content: end;
+  min-height: 168px;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(2, 116, 121, 0.07) 0%, #ffffff 100%);
+}
+
+.presentationSlide__benefitCard strong {
+  line-height: 1.55;
+}
+
+.presentationSlide__closing blockquote {
+  margin: 0;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #0f8c91 0%, #027479 100%);
+  color: #ffffff;
+  font-size: clamp(24px, 2.8vw, 36px);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.presentationDeck__footer {
+  border-top: 1px solid rgba(23, 32, 51, 0.08);
+}
+
+.presentationDeck__controls {
+  display: flex;
+  gap: 12px;
+}
+
+.presentationDeck__controls button {
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(2, 116, 121, 0.16);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--docs-heading);
+}
+
+.presentationDeck__controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.presentationSlide--problem .presentationSlide__summary,
+.presentationSlide--problem .presentationSlide__panel--accent {
+  background: rgba(237, 29, 29, 0.06);
+}
+
+.presentationSlide--library .presentationSlide__panel--highlight,
+.presentationSlide--library .presentationSlide__mappingRow {
+  background: rgba(2, 116, 121, 0.08);
+}
+
+.presentationSlide--closing .presentationSlide__frame {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, #f6fbfc 100%);
+}
+
+@media (max-width: 1180px) {
+  .presentationDeck__body,
+  .presentationSlide__content,
+  .presentationSlide__grid--mainAside,
+  .presentationSlide__grid--halves {
+    grid-template-columns: 1fr;
+  }
+
+  .presentationDeck__rail {
+    display: none;
+  }
+
+  .presentationSlide__notes {
+    order: -1;
+  }
+
+  .presentationSlide__stepList,
+  .presentationSlide__benefitGrid,
+  .presentationSlide__flow,
+  .presentationSlide__stackNodes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .presentationDeck__topbar,
+  .presentationDeck__footer,
+  .presentationDeck__stage {
+    padding: 16px;
+  }
+
+  .presentationDeck__topbar,
+  .presentationDeck__footer,
+  .presentationSlide__eyebrowRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .presentationSlide__frame {
+    min-height: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .presentationSlide__title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+}

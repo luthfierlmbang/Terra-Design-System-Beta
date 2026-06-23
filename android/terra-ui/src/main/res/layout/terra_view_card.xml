@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/terraCardRoot"
+        style="@style/Widget.Terra.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/terraCardMenuSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/terraCardMenuTitle"
+                style="@style/Widget.Terra.Card.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="Menu Title" />
+
+            <TextView
+                android:id="@+id/terraCardMenuSubtitle"
+                style="@style/Widget.Terra.Card.Subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLines="3"
+                android:text="Menu subtitle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/terraCardCustomerSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/terraCardCustomerName"
+                style="@style/Widget.Terra.Card.CustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Name" />
+
+            <TextView
+                android:id="@+id/terraCardCustomerMeta"
+                style="@style/Widget.Terra.Card.CustomerMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Customer Meta" />
+
+            <TextView
+                android:id="@+id/terraCardCustomerSecondaryText"
+                style="@style/Widget.Terra.Card.CustomerMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Customer secondary text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/terraCardInformationSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/terraCardPrimaryInfoRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/terraCardInfoPrimaryLabel"
+                    style="@style/Widget.Terra.Card.InfoLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Primary Label" />
+
+                <TextView
+                    android:id="@+id/terraCardInfoPrimaryValue"
+                    style="@style/Widget.Terra.Card.InfoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Primary Value" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/terraCardSecondaryInfoRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/terraCardInfoSecondaryLabel"
+                    style="@style/Widget.Terra.Card.InfoLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Secondary Label" />
+
+                <TextView
+                    android:id="@+id/terraCardInfoSecondaryValue"
+                    style="@style/Widget.Terra.Card.InfoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Secondary Value" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/terraCardButtonSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <com.terra.ds.button.TerraButtonView
+                android:id="@+id/terraCardButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action"
+                app:terraButtonSize="normal"
+                app:terraButtonType="primary" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

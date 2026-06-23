@@ -103,6 +103,7 @@ Brand, status, neutral, surface, overlay, and shadow primitives use consistent n
 | `pink/200` | `#FADADA` | Generated from thumbnail background |
 | `black/alpha-50` | `rgba(0,0,0,0.5)` | Existing `Background Color/Overlay Color` |
 | `black/alpha-12` | `rgba(0,0,0,0.12)` | Existing `Shadow/Card` opacity |
+| `black/alpha-10` | `rgba(0,0,0,0.1)` | Header/status bar subtle overlay |
 
 If an existing component uses an uncovered color, create a new primitive first and document it here before aliasing it semantically.
 
@@ -123,6 +124,7 @@ If an existing component uses an uncovered color, create a new primitive first a
 | `color/bg/fill/warning/default` | `--color-bg-fill-warning-default` | `yellow/500` | Warning filled UI |
 | `color/bg/disabled/default` | `--color-bg-disabled-default` | `neutral/50` | Disabled fill |
 | `color/bg/overlay/default` | `--color-bg-overlay-default` | `black/alpha-50` | Modal/scrim overlay |
+| `color/bg/overlay/subtle` | `--color-bg-overlay-subtle` | `black/alpha-10` | Header/status bar subtle overlay |
 | `color/text/primary/default` | `--color-text-primary-default` | `neutral/90` | Main text |
 | `color/text/primary/disabled` | `--color-text-primary-disabled` | `neutral/50` | Disabled text |
 | `color/text/secondary/default` | `--color-text-secondary-default` | `neutral/80` | Secondary text |
@@ -168,6 +170,40 @@ Component tokens alias semantic tokens. These make component binding stable even
 | `color/fab/sticky/bg/default` | `--color-fab-sticky-bg-default` | `color/bg/surface/primary/default` | Sticky FAB container |
 | `color/overlay/scrim/default` | `--color-overlay-scrim-default` | `color/bg/overlay/default` | Overlay component |
 | `color/page-identifier/text/default` | `--color-page-identifier-text-default` | `color/text/inverse/default` | Page identifier label |
+
+## Typography Tokens
+
+Typography in the current TERRA TAB file uses the `Jenius Sans` family consistently across heading, body, caption, and CTA styles.
+
+### Font Family
+
+| Role | Value | Notes |
+| --- | --- | --- |
+| Primary typeface | `Jenius Sans` | Main product typeface from Figma |
+| Web fallback | `'Jenius Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif` | Use when the branded font is not yet loaded |
+
+### Text Style Tokens
+
+| Figma Style | Suggested Token | Font Weight | Font Size | Line Height | Letter Spacing | Color |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `Header/XL` | `text/header/xl` | 700 | 28px | 32px | 0.003em | `#333333` |
+| `Header/L` | `text/header/l` | 700 | 24px | 30px | 0.0025em | `#333333` |
+| `Header/M` | `text/header/m` | 700 | 20px | 26px | 0.0025em | `#333333` |
+| `Header/S` | `text/header/s` | 700 | 18px | 22px | 0.002em | `#333333` |
+| `Medium Body Text/Regular` | `text/body/md/regular` | 400 | 16px | 22px | `normal` | `#333333` |
+| `Medium Body Text/Bold` | `text/body/md/bold` | 700 | 16px | 22px | `normal` | `#333333` |
+| `Small Body Text/Regular` | `text/body/sm/regular` | 400 | 14px | 20px | `normal` | `#333333` |
+| `Small Body Text/Bold` | `text/body/sm/bold` | 700 | 14px | 22px | `normal` | `#333333` |
+| `Caption Text/Dark` | `text/caption/dark` | 400 | 12px | 20px | `normal` | `#CCCCCC` |
+| `CTA Button/Medium` | `text/cta/md` | 700 | 16px | 24px | 0.0032em | `#FFFFFF` |
+| `CTA Button/Small` | `text/cta/sm` | 700 | 14px | 24px | 0.0028em | `#FFFFFF` |
+
+### Typography Implementation Notes
+
+- `Jenius Sans` font files are not currently stored in this repository.
+- Treat the font as a branded asset that must be supplied through platform delivery layers.
+- Web and Android implementations should keep the family name exactly `Jenius Sans` to stay aligned with Figma.
+- Caption and CTA text colors above should map to existing color tokens instead of being hardcoded when the typography token layer is formalized.
 
 ## Figma Binding Targets
 

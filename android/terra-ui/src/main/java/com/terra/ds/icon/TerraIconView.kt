@@ -3,10 +3,12 @@ package com.terra.ds.icon
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
+import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
 import com.terra.ds.R
+import com.terra.tokens.R as TokensR
 
 class TerraIconView @JvmOverloads constructor(
     context: Context,
@@ -51,7 +53,7 @@ class TerraIconView @JvmOverloads constructor(
             setIconTint(
                 typedArray.getColor(
                     R.styleable.TerraIconView_terraIconTint,
-                    ContextCompat.getColor(context, R.color.terra_color_neutral_90),
+                    ContextCompat.getColor(context, TokensR.color.terra_color_text_primary),
                 ),
             )
         }
@@ -59,12 +61,12 @@ class TerraIconView @JvmOverloads constructor(
         if (typedArray.hasValue(R.styleable.TerraIconView_terraIconSize)) {
             val size = typedArray.getDimensionPixelSize(
                 R.styleable.TerraIconView_terraIconSize,
-                LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT,
             )
             layoutParams = layoutParams?.apply {
                 width = size
                 height = size
-            } ?: LayoutParams(size, size)
+            } ?: ViewGroup.LayoutParams(size, size)
         }
 
         typedArray.recycle()
@@ -128,6 +130,7 @@ class TerraIconView @JvmOverloads constructor(
                 TerraIconName.NOTIFICATION -> R.drawable.terra_ic_notification
                 TerraIconName.TIME -> R.drawable.terra_ic_time
                 TerraIconName.CALENDAR -> R.drawable.terra_ic_calendar
+                TerraIconName.SCOOTER -> R.drawable.terra_ic_scooter
                 else -> R.drawable.terra_ic_placeholder
             }
         }
@@ -191,6 +194,7 @@ enum class TerraIconName(val attrValue: Int) {
     NOTIFICATION(37),
     TIME(38),
     CALENDAR(39),
+    SCOOTER(40),
     ;
 
     companion object {

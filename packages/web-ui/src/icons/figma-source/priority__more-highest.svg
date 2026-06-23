@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<g id=" ">
+<path id="Icon_2" fill-rule="evenodd" clip-rule="evenodd" d="M2 22V12L2.00384 11.7201C2.15207 6.32667 6.57076 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22H2Z" fill="url(#paint0_linear_0_10)"/>
+<path id="Icon_3" d="M8 13L12 10L16 13" stroke="var(--stroke-0, white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Icon_4" d="M7.5 9L11.5 6L15.5 9" stroke="var(--stroke-0, white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="Star 2" d="M11.6196 14.1708C11.7393 13.8023 12.2607 13.8023 12.3804 14.1708L12.8083 15.4875C12.8618 15.6523 13.0154 15.7639 13.1887 15.7639H14.5732C14.9606 15.7639 15.1218 16.2598 14.8083 16.4875L13.6882 17.3013C13.548 17.4032 13.4893 17.5837 13.5429 17.7485L13.9707 19.0652C14.0905 19.4338 13.6687 19.7402 13.3552 19.5125L12.2351 18.6987C12.0949 18.5968 11.9051 18.5968 11.7649 18.6987L10.6448 19.5125C10.3313 19.7402 9.90954 19.4338 10.0293 19.0652L10.4571 17.7485C10.5107 17.5837 10.452 17.4032 10.3118 17.3013L9.19173 16.4875C8.87825 16.2598 9.03936 15.7639 9.42685 15.7639H10.8113C10.9846 15.7639 11.1382 15.6523 11.1917 15.4875L11.6196 14.1708Z" fill="var(--fill-0, white)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_10" x1="9" y1="9" x2="15" y2="24.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EF3636"/>
+<stop offset="1" stop-color="#EC9600"/>
+</linearGradient>
+</defs>
+</svg>

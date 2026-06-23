@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Button -->
-    <dimen name="oasis_button_height_large">52dp</dimen>
-    <dimen name="oasis_button_height_medium">44dp</dimen>
-    <dimen name="oasis_button_height_small">36dp</dimen>
-    <dimen name="oasis_button_padding_horizontal">20dp</dimen>
+    <!-- Button — from OasisButton.css -->
+    <dimen name="oasis_button_padding_horizontal">24dp</dimen>
+    <dimen name="oasis_button_padding_horizontal_small">16dp</dimen>
+    <dimen name="oasis_button_padding_vertical_large">16dp</dimen>
+    <dimen name="oasis_button_padding_vertical">8dp</dimen>
 
-    <!-- Input -->
+    <!-- Input — from OasisTextField.css -->
     <dimen name="oasis_input_height">52dp</dimen>
     <dimen name="oasis_input_padding_horizontal">16dp</dimen>
-    <dimen name="oasis_input_padding_vertical">12dp</dimen>
+    <dimen name="oasis_input_padding_vertical">8dp</dimen>
     <dimen name="oasis_input_border_width">1dp</dimen>
     <dimen name="oasis_input_border_width_focus">2dp</dimen>
 
@@ -24,9 +24,11 @@
     <dimen name="oasis_avatar_size_96">96dp</dimen>
     <dimen name="oasis_avatar_size_128">128dp</dimen>
 
-    <!-- Toggle -->
+    <!-- Toggle — from OasisToggle.css: 52×32px -->
     <dimen name="oasis_toggle_width">52dp</dimen>
     <dimen name="oasis_toggle_height">32dp</dimen>
+    <dimen name="oasis_toggle_knob_size">24dp</dimen>
+    <dimen name="oasis_toggle_padding">4dp</dimen>
 
     <!-- BottomNav -->
     <dimen name="oasis_bottom_nav_height">64dp</dimen>
@@ -38,7 +40,11 @@
 
     <!-- Header -->
     <dimen name="oasis_header_height">56dp</dimen>
-    <dimen name="oasis_header_status_bar_height">24dp</dimen>
+
+    <!-- Tag — from OasisTags.css: padding 4px 8px -->
+    <dimen name="oasis_tag_padding_horizontal">8dp</dimen>
+    <dimen name="oasis_tag_padding_vertical">4dp</dimen>
+    <dimen name="oasis_tag_min_width">76dp</dimen>
 
     <!-- IndicatorGroup -->
     <dimen name="oasis_indicator_size">12dp</dimen>

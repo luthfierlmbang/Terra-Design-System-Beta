@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraTimerView">
+            <attr name="terraTimerLabel" format="string" />
+            <attr name="terraTimerValue" format="string" />
+            <attr name="terraTimerActive" format="boolean" />
+        </declare-styleable>
+</resources>

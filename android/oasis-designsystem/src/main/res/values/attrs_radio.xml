@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="OasisRadioButtonView">
-        <attr name="oasisRadioLabel" format="string" />
-        <attr name="oasisRadioChecked" format="boolean" />
-    </declare-styleable>
-</resources>

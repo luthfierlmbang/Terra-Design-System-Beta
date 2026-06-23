@@ -9,20 +9,36 @@
     <!-- Text -->
     <color name="oasis_text_primary">@color/oasis_neutral_900</color>
     <color name="oasis_text_secondary">@color/oasis_neutral_700</color>
-    <color name="oasis_text_disabled">@color/oasis_neutral_300</color>
+    <color name="oasis_text_muted">@color/oasis_neutral_500</color>
+    <color name="oasis_text_disabled">@color/oasis_neutral_500</color>
     <color name="oasis_text_inverse">@color/oasis_white</color>
     <color name="oasis_text_on_primary">@color/oasis_white</color>
+    <color name="oasis_text_action_primary">@color/oasis_teal_500</color>
+    <color name="oasis_text_action_secondary">@color/oasis_orange_500</color>
+    <color name="oasis_text_danger">@color/oasis_danger_500</color>
 
     <!-- Surface -->
-    <color name="oasis_surface_default">@color/oasis_white</color>
-    <color name="oasis_surface_subtle">@color/oasis_neutral_50</color>
+    <color name="oasis_surface_default">@color/oasis_neutral_50</color>
+    <color name="oasis_surface_subtle">@color/oasis_neutral_100</color>
+    <color name="oasis_surface_muted">@color/oasis_neutral_100</color>
     <color name="oasis_surface_disabled">@color/oasis_neutral_100</color>
+    <color name="oasis_bg_disabled">@color/oasis_neutral_300</color>
 
     <!-- Border -->
     <color name="oasis_border_default">@color/oasis_neutral_200</color>
-    <color name="oasis_border_strong">@color/oasis_neutral_500</color>
+    <color name="oasis_border_strong">@color/oasis_neutral_700</color>
+    <color name="oasis_border_muted">#DADADA</color>
+    <color name="oasis_border_disabled">@color/oasis_neutral_300</color>
     <color name="oasis_border_focus">@color/oasis_primary</color>
     <color name="oasis_border_error">@color/oasis_danger_500</color>
+    <color name="oasis_border_action_primary">@color/oasis_teal_500</color>
+    <color name="oasis_border_action_secondary">@color/oasis_orange_500</color>
+
+    <!-- Icon -->
+    <color name="oasis_icon_primary">@color/oasis_neutral_900</color>
+    <color name="oasis_icon_secondary">@color/oasis_neutral_700</color>
+    <color name="oasis_icon_disabled">@color/oasis_neutral_500</color>
+    <color name="oasis_icon_action_secondary">@color/oasis_orange_500</color>
 
     <!-- Feedback -->
     <color name="oasis_feedback_success">@color/oasis_success_500</color>
@@ -30,15 +46,23 @@
     <color name="oasis_feedback_danger">@color/oasis_danger_500</color>
     <color name="oasis_feedback_info">@color/oasis_info_500</color>
 
-    <!-- Tag surfaces -->
-    <color name="oasis_info_surface">@color/oasis_info_100</color>
-    <color name="oasis_success_surface">@color/oasis_success_100</color>
-    <color name="oasis_warning_surface">@color/oasis_warning_100</color>
-    <color name="oasis_danger_surface">@color/oasis_danger_100</color>
+    <!-- Tone surfaces for Alert component -->
+    <color name="oasis_tone_info_bg">@color/oasis_info_100</color>
+    <color name="oasis_tone_info_text">@color/oasis_teal_500</color>
+    <color name="oasis_tone_warning_bg">@color/oasis_warning_100</color>
+    <color name="oasis_tone_warning_text">#B37E12</color>
+    <color name="oasis_tone_danger_bg">@color/oasis_danger_100</color>
+    <color name="oasis_tone_danger_text">#AD2727</color>
 
-    <!-- Tag text -->
-    <color name="oasis_info_text">@color/oasis_info_500</color>
-    <color name="oasis_success_text">@color/oasis_success_500</color>
-    <color name="oasis_warning_text">@color/oasis_warning_500</color>
-    <color name="oasis_danger_text">@color/oasis_danger_500</color>
+    <!-- Tag fills: solid pill bg from OasisTags.css -->
+    <color name="oasis_info_surface">@color/oasis_tag_info_bg</color>
+    <color name="oasis_success_surface">@color/oasis_success_500</color>
+    <color name="oasis_warning_surface">@color/oasis_tag_warning_bg</color>
+    <color name="oasis_danger_surface">@color/oasis_danger_500</color>
+
+    <!-- Tag text: always white on solid bg -->
+    <color name="oasis_info_text">@color/oasis_white</color>
+    <color name="oasis_success_text">@color/oasis_white</color>
+    <color name="oasis_warning_text">@color/oasis_white</color>
+    <color name="oasis_danger_text">@color/oasis_white</color>
 </resources>

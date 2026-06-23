@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraSelectView">
+            <attr name="terraSelectPlaceholder" format="string" />
+            <attr name="terraSelectFilled" format="boolean" />
+            <attr name="terraSelectSearchEnabled" format="boolean" />
+            <attr name="terraSelectSearchFocused" format="boolean" />
+        </declare-styleable>
+</resources>

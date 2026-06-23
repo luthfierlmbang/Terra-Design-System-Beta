@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="terra_font_family_brand" type="font">@font/jenius_sans</item>
+</resources>

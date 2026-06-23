@@ -1,28 +1,32 @@
+export type TerraHeaderVariant = 'main' | 'secondary';
+export type TerraHeaderLeading = 'none' | 'back' | 'menu' | 'icon';
+
+export interface TerraHeaderPageIdentifier {
+  moduleName?: string;
+  apkName?: string;
+  text?: string;
+}
+
 export interface TerraHeaderProps {
-  /** Main title text */
-  title: string;
-  
-  /** Optional icon name or component for the left side */
+  title?: string;
+  subtitle?: string;
+  variant?: TerraHeaderVariant;
+  leading?: TerraHeaderLeading;
   icon?: React.ReactNode;
-  
-  /** Optional page identifier/breadcrumb info */
-  pageIdentifier?: {
-    moduleName?: string;
-    apkName?: string;
-  };
-  
-  /** Show status bar (time, wifi, etc) - typically for mobile */
+  actionOne?: React.ReactNode;
+  actionTwo?: React.ReactNode;
+  showActionOne?: boolean;
+  showActionTwo?: boolean;
+  showIdentifier?: boolean;
+  pageIdentifier?: TerraHeaderPageIdentifier;
   showStatusBar?: boolean;
-  
-  /** Background color override - defaults to primary brand color */
   backgroundColor?: string;
-  
-  /** Additional CSS class */
   className?: string;
 }
 
 export interface TerraPageIdentifierProps {
   moduleName?: string;
   apkName?: string;
+  text?: string;
   className?: string;
 }

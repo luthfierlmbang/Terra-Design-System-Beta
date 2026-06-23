@@ -20,7 +20,8 @@ export function TerraTabs({ className, items, onChange, scrollable = false, sele
             aria-selected={selected}
             onClick={() => onChange?.(item.id)}
           >
-            {item.label}
+            <span className="terraTabs__label">{item.label}</span>
+            <span className="terraTabs__indicator" aria-hidden="true" />
           </button>
         );
       })}

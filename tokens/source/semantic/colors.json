@@ -13,6 +13,7 @@
   "color/bg/fill/success/default": "{green.500}",
   "color/bg/disabled/default": "{neutral.50}",
   "color/bg/overlay/default": "{black.alpha-50}",
+  "color/bg/overlay/subtle": "{black.alpha-10}",
   "color/text/primary/default": "{neutral.90}",
   "color/text/primary/disabled": "{neutral.50}",
   "color/text/secondary/default": "{neutral.80}",

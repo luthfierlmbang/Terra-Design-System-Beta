@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraEmptyStateView">
+        <attr name="terraEmptyStateVariant">
+            <enum name="searchNotFound" value="0" />
+            <enum name="happyBirthday" value="1" />
+            <enum name="connectionError" value="2" />
+            <enum name="underMaintenance" value="3" />
+            <enum name="defaultSearchState" value="4" />
+            <enum name="pageNotFound" value="5" />
+            <enum name="serverBusy" value="6" />
+            <enum name="dataNotFound" value="7" />
+            <enum name="timeOut" value="8" />
+            <enum name="successSubmit" value="9" />
+        </attr>
+        <attr name="terraEmptyStateButtonVisible" format="boolean" />
+    </declare-styleable>
+</resources>

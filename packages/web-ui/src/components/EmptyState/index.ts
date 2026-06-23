@@ -1,2 +1,2 @@
 export { TerraEmptyState } from './EmptyState';
-export type { TerraEmptyStateProps } from './EmptyState.types';
+export type { TerraEmptyStateProps, TerraEmptyStateVariant } from './EmptyState.types';

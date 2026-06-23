@@ -1,54 +1,140 @@
 export type TerraIconSize = 'sm' | 'md' | 'lg';
 
-export type TerraIconCategory =
-  | 'action'
-  | 'navigation'
-  | 'status'
-  | 'info'
-  | 'domain'
-  | 'system';
+export const terraIconCategories = [
+  'action',
+  'navigation',
+  'status',
+  'state',
+  'info',
+  'domain',
+  'shapes',
+  'system',
+  'priority',
+  'menu',
+] as const;
 
-export type TerraIconName =
-  | 'placeholder'
-  | 'plus'
-  | 'check'
-  | 'close'
-  | 'delete'
-  | 'edit'
-  | 'refresh'
-  | 'search'
-  | 'sort'
-  | 'qr-scan'
-  | 'minus'
-  | 'arrow-left'
-  | 'arrow-right'
-  | 'chevron-down'
-  | 'chevron-left'
-  | 'chevron-right'
-  | 'chevron-up'
-  | 'kebab-horizontal'
-  | 'kebab-horizontal-2'
-  | 'hamburger-menu'
-  | 'done'
-  | 'in-progress'
-  | 'offline'
-  | 'exclamation'
-  | 'information'
-  | 'questionmark'
-  | 'counter'
-  | 'cash-in'
-  | 'cash-out'
-  | 'nasabah'
-  | 'bank'
-  | 'report'
-  | 'report-transaction'
-  | 'akusisi'
-  | 'home'
-  | 'user'
-  | 'settings'
-  | 'notification'
-  | 'time'
-  | 'calendar';
+export type TerraIconCategory = (typeof terraIconCategories)[number];
+
+export const terraIconNames = [
+  'placeholder',
+  'plus',
+  'check',
+  'close',
+  'delete',
+  'edit',
+  'refresh',
+  'search',
+  'sort',
+  'qr-scan',
+  'minus',
+  'download',
+  'upload',
+  'print',
+  'logout',
+  'manual-sync',
+  'digital-sign',
+  'search-user',
+  'filter-2',
+  'center',
+  'align-left',
+  'arrow-left',
+  'arrow-right',
+  'chevron-down',
+  'chevron-left',
+  'chevron-right',
+  'chevron-up',
+  'kebab-horizontal',
+  'kebab-vertical',
+  'kebab-horizontal-2',
+  'hamburger-menu',
+  'expand',
+  'expand-2',
+  'done',
+  'in-progress',
+  'offline',
+  'default',
+  'disabled',
+  'active',
+  'inactive',
+  'pending',
+  'success',
+  'warning',
+  'error',
+  'exclamation',
+  'information',
+  'questionmark',
+  'counter',
+  'quest',
+  'cash-in',
+  'cash-out',
+  'cash',
+  'nasabah',
+  'bank',
+  'report',
+  'report-transaction',
+  'akusisi',
+  'account-mutation',
+  'achievement',
+  'eform',
+  'interview-survey',
+  'klaim-asuransi',
+  'learning',
+  'restruktur',
+  'home',
+  'user',
+  'settings',
+  'notification',
+  'time',
+  'calendar',
+  'alarm',
+  'calculator',
+  'camera',
+  'chat',
+  'dashboard',
+  'email',
+  'email-2',
+  'face-recognition',
+  'grow',
+  'history',
+  'image',
+  'key',
+  'light',
+  'light-ray-top',
+  'light-ray-right',
+  'light-ray-bottom-left',
+  'light-ray-top-left',
+  'lock',
+  'map',
+  'monitoring',
+  'performance',
+  'scooter',
+  'star',
+  'switch',
+  'switch-2',
+  'target',
+  'vault',
+  'square',
+  'circle',
+  'diamond',
+  'rounded',
+  'highest',
+  'low',
+  'medium',
+  'high',
+  'more-highest',
+  'akusisi-nasabah',
+  'keagenan',
+  'pemeliharaan-nasabah',
+  'transaksi',
+] as const;
+
+export type TerraIconName = (typeof terraIconNames)[number];
+
+export type TerraIconDefinition = {
+  category: TerraIconCategory;
+  name: TerraIconName;
+  svg: string;
+};
 
 export interface TerraIconProps extends React.HTMLAttributes<HTMLSpanElement> {
   category?: TerraIconCategory;

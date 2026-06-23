@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraImageUploadView">
+        <attr name="terraImageUploadLabel" format="string" />
+        <attr name="terraImageUploadHint" format="string" />
+        <attr name="terraImageUploadState">
+            <enum name="upload" value="0" />
+            <enum name="processing" value="1" />
+            <enum name="attachedOneCta" value="2" />
+            <enum name="attachedTwoCta" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

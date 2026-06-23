@@ -3,30 +3,27 @@
 .terraProgressBar {
   overflow: hidden;
   width: 100%;
-  min-height: 10px;
-  border-radius: var(--radius-pill);
-  background: var(--color-border-tertiary-default);
+  height: 10px;
+  border-radius: 999px;
+  background: #ededed;
 }
 
 .terraProgressBar__fill {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: var(--color-bg-fill-secondary-default);
+  background: #ededed;
 }
 
-.terraProgressBar--bar1 {
-  min-height: 14px;
+.terraProgressBar--bar1,
+.terraProgressBar--bar2 {
+  height: 14px;
 }
 
 .terraProgressBar--bar1 .terraProgressBar__fill {
-  background: var(--color-bg-fill-info-default);
-}
-
-.terraProgressBar--bar2 {
-  min-height: 14px;
+  background: #0092e6;
 }
 
 .terraProgressBar--bar2 .terraProgressBar__fill {
-  background: var(--color-bg-fill-secondary-default);
+  background: #027479;
 }

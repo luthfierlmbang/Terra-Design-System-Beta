@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraChipView">
+            <attr name="terraChipText" format="string" />
+            <attr name="terraChipSelected" format="boolean" />
+            <attr name="terraChipShowLeftIcon" format="boolean" />
+            <attr name="terraChipShowRightIcon" format="boolean" />
+            <attr name="terraChipShowCounter" format="boolean" />
+            <attr name="terraChipCounterValue" format="integer" />
+        </declare-styleable>
+</resources>

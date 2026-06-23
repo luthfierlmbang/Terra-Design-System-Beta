@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Brand -->
+    <!-- Brand: values from apps/web-catalog/src/styles.css -->
     <color name="oasis_orange_500">#F58220</color>
-    <color name="oasis_orange_600">#D86A0E</color>
-    <color name="oasis_yellow_500">#F7BE26</color>
-    <color name="oasis_teal_500">#186D6D</color>
+    <color name="oasis_orange_600">#D2711B</color>
+    <color name="oasis_yellow_500">#F7AE19</color>
+    <color name="oasis_teal_500">#027479</color>
 
-    <!-- Neutrals -->
-    <color name="oasis_neutral_900">#1A1A1A</color>
+    <!-- Neutrals: mapped to oasis CSS vars -->
+    <color name="oasis_neutral_900">#333333</color>
     <color name="oasis_neutral_700">#4C4C4C</color>
-    <color name="oasis_neutral_500">#747474</color>
-    <color name="oasis_neutral_300">#C5B8B8</color>
-    <color name="oasis_neutral_200">#E5D9D9</color>
-    <color name="oasis_neutral_100">#F2EEEE</color>
-    <color name="oasis_neutral_50">#FAF8F8</color>
+    <color name="oasis_neutral_500">#999999</color>
+    <color name="oasis_neutral_300">#CCCCCC</color>
+    <color name="oasis_neutral_200">#EDEDED</color>
+    <color name="oasis_neutral_100">#EEEEEE</color>
+    <color name="oasis_neutral_50">#FEFEFE</color>
     <color name="oasis_white">#FFFFFF</color>
     <color name="oasis_black">#000000</color>
 
-    <!-- Status -->
-    <color name="oasis_success_500">#2E7D32</color>
-    <color name="oasis_success_100">#C8E6C9</color>
-    <color name="oasis_warning_500">#ED6C02</color>
-    <color name="oasis_warning_100">#FFE0B2</color>
-    <color name="oasis_danger_500">#D32F2F</color>
-    <color name="oasis_danger_100">#FFCDD2</color>
-    <color name="oasis_info_500">#0288D1</color>
-    <color name="oasis_info_100">#B3E5FC</color>
+    <!-- Status: values from web source, NOT Material defaults -->
+    <color name="oasis_success_500">#10B855</color>
+    <color name="oasis_success_100">#D6F5E5</color>
+    <color name="oasis_warning_500">#F7AE19</color>
+    <color name="oasis_warning_100">#FEF9ED</color>
+    <color name="oasis_danger_500">#ED1D1D</color>
+    <color name="oasis_danger_100">#FEEFEF</color>
+    <color name="oasis_info_500">#0092E6</color>
+    <color name="oasis_info_100">#EBF4F4</color>
+
+    <!-- Tag fills: solid bg from OasisTags.css -->
+    <color name="oasis_tag_info_bg">#57B4F5</color>
+    <color name="oasis_tag_warning_bg">#E2BA32</color>
 </resources>

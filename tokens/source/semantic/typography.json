@@ -1,0 +1,54 @@
+{
+  "font-family/base": "{font-family.brand}",
+  "font-family/mono": "{font-family.mono}",
+
+  "text/title/page/font-size": "{font-size.42}",
+  "text/title/page/font-weight": "{font-weight.extrabold}",
+  "text/title/page/line-height": "{line-height.tight}",
+  "text/title/page/letter-spacing": "{letter-spacing.tight}",
+
+  "text/title/hero/font-size": "{font-size.28}",
+  "text/title/hero/font-weight": "{font-weight.bold}",
+  "text/title/hero/line-height": "{line-height.heading}",
+  "text/title/hero/letter-spacing": "{letter-spacing.heading}",
+
+  "text/title/section/font-size": "{font-size.17}",
+  "text/title/section/font-weight": "{font-weight.bold}",
+  "text/title/section/line-height": "{line-height.body}",
+  "text/title/section/letter-spacing": "{letter-spacing.section}",
+
+  "text/body/lg/font-size": "{font-size.16}",
+  "text/body/lg/font-weight": "{font-weight.regular}",
+  "text/body/lg/line-height": "{line-height.body-loose}",
+  "text/body/lg/letter-spacing": "{letter-spacing.body}",
+
+  "text/body/md/font-size": "{font-size.13}",
+  "text/body/md/font-weight": "{font-weight.regular}",
+  "text/body/md/line-height": "{line-height.body-relaxed}",
+  "text/body/md/letter-spacing": "{letter-spacing.body}",
+
+  "text/body/sm/font-size": "{font-size.12}",
+  "text/body/sm/font-weight": "{font-weight.regular}",
+  "text/body/sm/line-height": "{line-height.body}",
+  "text/body/sm/letter-spacing": "{letter-spacing.body}",
+
+  "text/label/default/font-size": "{font-size.11}",
+  "text/label/default/font-weight": "{font-weight.semibold}",
+  "text/label/default/line-height": "{line-height.body}",
+  "text/label/default/letter-spacing": "{letter-spacing.label}",
+
+  "text/eyebrow/default/font-size": "{font-size.11}",
+  "text/eyebrow/default/font-weight": "{font-weight.bold}",
+  "text/eyebrow/default/line-height": "{line-height.body}",
+  "text/eyebrow/default/letter-spacing": "{letter-spacing.eyebrow}",
+
+  "text/badge/default/font-size": "{font-size.10}",
+  "text/badge/default/font-weight": "{font-weight.bold}",
+  "text/badge/default/line-height": "{line-height.body}",
+  "text/badge/default/letter-spacing": "{letter-spacing.badge}",
+
+  "text/code/default/font-size": "{font-size.12}",
+  "text/code/default/font-weight": "{font-weight.medium}",
+  "text/code/default/line-height": "{line-height.mono}",
+  "text/code/default/letter-spacing": "{letter-spacing.body}"
+}

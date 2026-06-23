@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraProgressBarView">
+        <attr name="terraProgressBarType">
+            <enum name="base" value="0" />
+            <enum name="bar1" value="1" />
+            <enum name="bar2" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

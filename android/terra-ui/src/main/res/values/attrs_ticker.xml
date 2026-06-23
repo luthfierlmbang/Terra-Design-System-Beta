@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraTickerView">
+        <attr name="terraTickerTone">
+            <enum name="information" value="0" />
+            <enum name="warning" value="1" />
+            <enum name="error" value="2" />
+        </attr>
+        <attr name="terraTickerDetailed" format="boolean" />
+        <attr name="terraTickerTitle" format="string" />
+        <attr name="terraTickerMessage" format="string" />
+    </declare-styleable>
+</resources>

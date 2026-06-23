@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraSearchBarView">
+        <attr name="terraSearchBarText" format="string" />
+        <attr name="terraSearchBarState">
+            <enum name="idle" value="0" />
+            <enum name="focus" value="1" />
+            <enum name="result" value="2" />
+            <enum name="disabled" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

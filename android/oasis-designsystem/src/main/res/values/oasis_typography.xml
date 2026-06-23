@@ -3,58 +3,85 @@
     <!-- Display -->
     <style name="TextAppearance.Oasis.DisplayLarge" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="android:textSize">32sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/oasis_text_primary</item>
     </style>
 
     <!-- Title -->
     <style name="TextAppearance.Oasis.Title" parent="TextAppearance.Material3.TitleMedium">
         <item name="android:textSize">18sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/oasis_text_primary</item>
     </style>
 
-    <!-- Body -->
+    <!-- Body 16px/400 -->
     <style name="TextAppearance.Oasis.Body" parent="TextAppearance.Material3.BodyMedium">
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
         <item name="android:textColor">@color/oasis_text_primary</item>
     </style>
 
+    <!-- Body small 14px/400 -->
+    <style name="TextAppearance.Oasis.BodySmall" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textColor">@color/oasis_text_primary</item>
+    </style>
+
+    <!-- Body bold 16px/700 -->
     <style name="TextAppearance.Oasis.BodyBold" parent="TextAppearance.Material3.BodyMedium">
-        <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/oasis_text_primary</item>
     </style>
 
-    <!-- Label -->
+    <!-- Label 12px/400 -->
     <style name="TextAppearance.Oasis.Label" parent="TextAppearance.Material3.LabelMedium">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
         <item name="android:textColor">@color/oasis_text_secondary</item>
     </style>
 
     <!-- Numeric -->
     <style name="TextAppearance.Oasis.NumericValue" parent="TextAppearance.Material3.HeadlineSmall">
         <item name="android:textSize">24sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/oasis_text_primary</item>
     </style>
 
-    <!-- Button -->
+    <!-- Button Large: 16px/700 -->
     <style name="TextAppearance.Oasis.Button.Large" parent="TextAppearance.Material3.LabelLarge">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineHeight">24sp</item>
     </style>
 
-    <style name="TextAppearance.Oasis.Button.Medium" parent="TextAppearance.Material3.LabelMedium">
+    <!-- Button Medium: 16px/700 -->
+    <style name="TextAppearance.Oasis.Button.Medium" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineHeight">24sp</item>
+    </style>
+
+    <!-- Button Small: 14px/700 -->
+    <style name="TextAppearance.Oasis.Button.Small" parent="TextAppearance.Material3.LabelMedium">
         <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineHeight">24sp</item>
     </style>
 
-    <style name="TextAppearance.Oasis.Button.Small" parent="TextAppearance.Material3.LabelSmall">
-        <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+    <!-- Tag: 14px/700/white -->
+    <style name="TextAppearance.Oasis.Tag" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/oasis_text_inverse</item>
     </style>
 </resources>

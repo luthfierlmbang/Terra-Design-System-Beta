@@ -13,9 +13,21 @@
         <com.terra.ds.header.TerraHeaderView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:terraHeaderTitle="Title"
-            app:terraHeaderModuleName="Put Main Module name"
-            app:terraHeaderApkName="Put APK Name"
+            app:terraHeaderVariant="main"
+            app:terraHeaderLeading="icon"
+            app:terraHeaderShowActionOne="true"
+            app:terraHeaderShowActionTwo="true"
+            app:terraHeaderShowStatusBar="true" />
+
+        <com.terra.ds.header.TerraHeaderView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:terraHeaderVariant="secondary"
+            app:terraHeaderLeading="back"
+            app:terraHeaderTitleText="Title"
+            app:terraHeaderIdentifierText="Put Main Module name | Put APK Name"
+            app:terraHeaderShowActionOne="true"
+            app:terraHeaderShowActionTwo="true"
             app:terraHeaderShowStatusBar="true" />
 
         <LinearLayout
@@ -43,7 +55,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:terraIconCategory="system"
-                    app:terraIconName="placeholder" />
+                    app:terraIconName="scooter" />
 
                 <com.terra.ds.icon.TerraIconView
                     android:layout_width="24dp"
@@ -55,7 +67,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:terraIconCategory="action"
-                    app:terraIconName="search" />
+                    app:terraIconName="notification" />
 
                 <com.terra.ds.icon.TerraIconView
                     android:layout_width="24dp"
@@ -79,7 +91,7 @@
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     app:terraIconCategory="system"
-                    app:terraIconName="settings" />
+                    app:terraIconName="scooter" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

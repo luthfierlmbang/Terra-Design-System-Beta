@@ -9,107 +9,175 @@
   justify-content: flex-end;
   align-items: center;
   gap: 3px;
-  padding: 4px 8px 3px;
+  padding: 4px 8px 3.11px 0;
   background: rgba(0, 0, 0, 0.1);
   color: var(--terra-color-text-inverse, #ffffff);
-  font-size: 14px;
-  line-height: normal;
 }
 
 .terra-header__status-time {
-  opacity: 0.9;
-  font-family: var(--terra-font-family-system, Roboto, sans-serif);
-  font-weight: 500;
   min-width: 36px;
+  margin-right: 3px;
+  color: inherit;
+  font-family: var(--terra-font-family-system, var(--font-family-brand));
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.89px;
+  opacity: 0.9;
   text-align: right;
 }
 
 .terra-header__status-indicators {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 3px;
 }
 
-.terra-header__status-indicator {
-  width: 16px;
-  height: 16px;
+.terra-header__status-glyph {
+  display: inline-flex;
+  flex-shrink: 0;
   opacity: 0.9;
+}
+
+.terra-header__status-glyph--wifi {
+  width: 18px;
+  height: 17px;
+  border-top: 2px solid currentColor;
+  border-radius: 999px 999px 0 0;
+  transform: scaleX(0.9);
+}
+
+.terra-header__status-glyph--cellular {
+  width: 16px;
+  height: 17px;
+  background: linear-gradient(to top, currentColor 0 100%);
+  clip-path: polygon(0 100%, 0 72%, 22% 72%, 22% 56%, 44% 56%, 44% 40%, 66% 40%, 66% 24%, 88% 24%, 88% 8%, 100% 8%, 100% 100%);
+}
+
+.terra-header__status-glyph--battery {
+  position: relative;
+  width: 16px;
+  height: 17px;
+  border: 1.5px solid currentColor;
+  border-radius: 3px;
+}
+
+.terra-header__status-glyph--battery::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -3px;
+  width: 2px;
+  height: 7px;
+  border-radius: 0 2px 2px 0;
+  background: currentColor;
 }
 
 .terra-header__main {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 40px 24px 16px;
+  padding: 44px 24px 20px;
   background: var(--terra-color-brand-primary-main, #f4831f);
+  color: var(--terra-color-text-inverse, #ffffff);
+  gap: 16px;
+}
+
+.terra-header__leading,
+.terra-header__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.terra-header__leading--hidden,
+.terra-header__actions--hidden {
+  visibility: hidden;
 }
 
 .terra-header__content {
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: flex-start;
   min-width: 0;
+}
+
+.terra-header--main .terra-header__content {
+  align-self: stretch;
+}
+
+.terra-header--main .terra-header__content {
+  align-items: center;
+  justify-content: center;
+}
+
+.terra-header--secondary .terra-header__content {
+  align-items: stretch;
+  justify-content: center;
+}
+
+.terra-header__logo-image {
+  display: block;
+  width: 69.51px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .terra-header__title-row {
   display: flex;
   align-items: center;
-  gap: 16px;
   width: 100%;
-  margin-bottom: -4px;
-}
-
-.terra-header__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  color: var(--terra-color-text-inverse, #ffffff);
-  flex-shrink: 0;
+  gap: 16px;
 }
 
 .terra-header__title {
-  flex: 1;
+  margin: 0;
   min-width: 0;
-  color: var(--terra-color-text-inverse, #ffffff);
-  font-family: var(--terra-font-family-heading, sans-serif);
+  color: inherit;
+  font-family: var(--terra-font-family-heading, var(--font-family-brand));
   font-size: 20px;
   font-weight: 700;
-  line-height: 32px;
-  letter-spacing: 0.05px;
-  margin: 0;
+  line-height: 26px;
+  letter-spacing: 0.0025em;
 }
 
-.terra-header__page-identifier-wrapper {
-  display: flex;
-  width: 100%;
-  padding: 4px 0 4px 40px;
-  background: inherit;
-}
-
+.terra-header__subtitle,
 .terra-page-identifier {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  color: var(--terra-color-text-inverse, #ffffff);
-  font-family: var(--terra-font-family-body, sans-serif);
+  margin: 0;
+  color: inherit;
+  font-family: var(--terra-font-family-body, var(--font-family-brand));
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.terra-page-identifier__text {
-  margin: 0;
+.terra-header__subtitle {
+  margin-top: 2px;
+}
+
+.terra-page-identifier {
+  margin-top: 0;
+  padding-left: 42px;
   white-space: nowrap;
 }
 
-.terra-page-identifier__separator {
-  display: inline-flex;
+.terra-header__actions {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  transform: rotate(90deg);
-  opacity: 0.8;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.terra-header--main .terra-header__leading,
+.terra-header--main .terra-header__actions {
+  min-width: 64px;
+}
+
+.terra-header--secondary .terra-header__leading {
+  visibility: visible;
 }

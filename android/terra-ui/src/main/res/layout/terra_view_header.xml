@@ -5,61 +5,142 @@
         android:id="@+id/terraHeaderStatusBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1A000000"
+        android:background="@color/terra_color_overlay_subtle"
         android:gravity="end|center_vertical"
         android:orientation="horizontal"
-        android:paddingStart="8dp"
+        android:paddingStart="0dp"
         android:paddingTop="4dp"
         android:paddingEnd="8dp"
         android:paddingBottom="3dp">
 
         <TextView
             android:id="@+id/terraHeaderStatusTime"
+            style="@style/TextAppearance.Terra.Body.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
             android:text="12:30"
-            android:textColor="@color/terra_color_neutral_10"
-            android:textSize="14sp" />
+            android:textColor="@color/terra_color_text_on_primary" />
+
+        <ImageView
+            android:id="@+id/terraHeaderStatusWifi"
+            android:layout_width="18dp"
+            android:layout_height="17dp"
+            android:layout_marginEnd="3dp"
+            android:contentDescription="@null"
+            android:src="@drawable/terra_ic_status_wifi"
+            android:tint="@color/terra_color_text_on_primary" />
+
+        <ImageView
+            android:id="@+id/terraHeaderStatusCellular"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginEnd="3dp"
+            android:contentDescription="@null"
+            android:src="@drawable/terra_ic_status_cellular"
+            android:tint="@color/terra_color_text_on_primary" />
+
+        <ImageView
+            android:id="@+id/terraHeaderStatusBattery"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:contentDescription="@null"
+            android:src="@drawable/terra_ic_status_battery"
+            android:tint="@color/terra_color_text_on_primary" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/terraHeaderMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/terra_color_orange_500"
+        android:background="@color/terra_color_secondary"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="24dp"
-        android:paddingTop="40dp"
+        android:paddingTop="44dp"
         android:paddingEnd="24dp"
-        android:paddingBottom="16dp">
+        android:paddingBottom="20dp">
 
         <FrameLayout
-            android:id="@+id/terraHeaderIconContainer"
+            android:id="@+id/terraHeaderLeadingContainer"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginEnd="16dp" />
 
         <LinearLayout
+            android:id="@+id/terraHeaderCenterContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/terraHeaderTitle"
-                style="@style/Widget.Terra.Header.Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Title" />
+            <ImageView
+                android:id="@+id/terraHeaderLogo"
+                android:layout_width="70dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/terra_header_logo" />
 
-            <TextView
-                android:id="@+id/terraHeaderPageIdentifier"
-                style="@style/Widget.Terra.Header.PageIdentifier"
+            <LinearLayout
+                android:id="@+id/terraHeaderTextStack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Put Main Module name | Put APK Name" />
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/terraHeaderTitleRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/terraHeaderTitle"
+                        style="@style/Widget.Terra.Header.Title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Title" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/terraHeaderSubtitle"
+                    style="@style/Widget.Terra.Header.PageIdentifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subtitle"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/terraHeaderPageIdentifier"
+                    style="@style/Widget.Terra.Header.PageIdentifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Put Main Module name | Put APK Name" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/terraHeaderActionsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/terraHeaderActionOneContainer"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp" />
+
+            <FrameLayout
+                android:id="@+id/terraHeaderActionTwoContainer"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
         </LinearLayout>
     </LinearLayout>
 </merge>

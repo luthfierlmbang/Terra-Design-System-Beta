@@ -5,8 +5,10 @@ import android.util.AttributeSet
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.widget.TextViewCompat
 import androidx.core.content.ContextCompat
 import com.terra.ds.R
+import com.terra.tokens.R as TokensR
 
 enum class TerraButtonType {
     PRIMARY,
@@ -76,16 +78,16 @@ class TerraButtonView @JvmOverloads constructor(
     private fun applySize() {
         when (terraButtonSize) {
             TerraButtonSize.NORMAL -> {
-                minHeight = context.resources.getDimensionPixelSize(R.dimen.terra_button_height_normal)
-                val horizontalPadding = context.resources.getDimensionPixelSize(R.dimen.terra_spacing_16)
+                minHeight = context.resources.getDimensionPixelSize(TokensR.dimen.terra_button_height_normal)
+                val horizontalPadding = context.resources.getDimensionPixelSize(TokensR.dimen.terra_spacing_16)
                 setPaddingRelative(horizontalPadding, paddingTop, horizontalPadding, paddingBottom)
-                textSize = 14f
+                TextViewCompat.setTextAppearance(this, R.style.TextAppearance_Terra_CTA_Medium)
             }
             TerraButtonSize.SMALL -> {
-                minHeight = context.resources.getDimensionPixelSize(R.dimen.terra_button_height_small)
-                val horizontalPadding = context.resources.getDimensionPixelSize(R.dimen.terra_spacing_12)
+                minHeight = context.resources.getDimensionPixelSize(TokensR.dimen.terra_button_height_small)
+                val horizontalPadding = context.resources.getDimensionPixelSize(TokensR.dimen.terra_spacing_12)
                 setPaddingRelative(horizontalPadding, paddingTop, horizontalPadding, paddingBottom)
-                textSize = 12f
+                TextViewCompat.setTextAppearance(this, R.style.TextAppearance_Terra_CTA_Small)
             }
         }
     }
@@ -104,27 +106,27 @@ class TerraButtonView @JvmOverloads constructor(
         return when (terraButtonType) {
             TerraButtonType.PRIMARY -> ButtonAppearance(
                 R.drawable.terra_bg_button_primary,
-                R.color.terra_color_neutral_10,
+                TokensR.color.terra_color_text_on_primary,
             )
             TerraButtonType.SECONDARY -> ButtonAppearance(
                 R.drawable.terra_bg_button_secondary,
-                R.color.terra_color_neutral_10,
+                TokensR.color.terra_color_text_on_primary,
             )
             TerraButtonType.OUTLINED_PRIMARY -> ButtonAppearance(
                 R.drawable.terra_bg_button_outlined_primary,
-                R.color.terra_color_teal_700,
+                TokensR.color.terra_color_primary,
             )
             TerraButtonType.OUTLINED_SECONDARY -> ButtonAppearance(
                 R.drawable.terra_bg_button_outlined_secondary,
-                R.color.terra_color_orange_500,
+                TokensR.color.terra_color_secondary,
             )
             TerraButtonType.DANGER -> ButtonAppearance(
                 R.drawable.terra_bg_button_danger,
-                R.color.terra_color_neutral_10,
+                TokensR.color.terra_color_text_on_primary,
             )
             TerraButtonType.TEXT -> ButtonAppearance(
                 android.R.color.transparent,
-                R.color.terra_color_teal_700,
+                TokensR.color.terra_color_primary,
             )
         }
     }
@@ -134,15 +136,15 @@ class TerraButtonView @JvmOverloads constructor(
             TerraButtonType.OUTLINED_PRIMARY,
             TerraButtonType.OUTLINED_SECONDARY -> ButtonAppearance(
                 R.drawable.terra_bg_button_disabled,
-                R.color.terra_color_neutral_50,
+                TokensR.color.terra_color_disabled,
             )
             TerraButtonType.TEXT -> ButtonAppearance(
                 android.R.color.transparent,
-                R.color.terra_color_neutral_50,
+                TokensR.color.terra_color_disabled,
             )
             else -> ButtonAppearance(
                 R.drawable.terra_bg_button_disabled,
-                R.color.terra_color_neutral_10,
+                TokensR.color.terra_color_text_on_primary,
             )
         }
     }

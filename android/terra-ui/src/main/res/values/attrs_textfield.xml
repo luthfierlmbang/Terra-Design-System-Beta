@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraTextFieldView">
+        <attr name="terraTextFieldLabel" format="string" />
+        <attr name="terraTextFieldPlaceholder" format="string" />
+        <attr name="terraTextFieldHelper" format="string" />
+        <attr name="terraTextFieldVariant">
+            <enum name="normal" value="0" />
+            <enum name="textPrefix" value="1" />
+            <enum name="textPrefixIcon" value="2" />
+            <enum name="textSuffix" value="3" />
+        </attr>
+        <attr name="terraTextFieldShowLabel" format="boolean" />
+        <attr name="terraTextFieldShowHelper" format="boolean" />
+        <attr name="terraTextFieldShowLeftIcon" format="boolean" />
+        <attr name="terraTextFieldShowRightIcon" format="boolean" />
+    </declare-styleable>
+</resources>

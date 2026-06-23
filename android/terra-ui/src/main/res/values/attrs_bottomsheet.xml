@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraBottomSheetView">
+        <attr name="terraBottomSheetTitle" format="string" />
+        <attr name="terraBottomSheetVariant">
+            <enum name="options" value="0" />
+            <enum name="countdown" value="1" />
+        </attr>
+        <attr name="terraBottomSheetSearchEnabled" format="boolean" />
+        <attr name="terraBottomSheetExpanded" format="boolean" />
+    </declare-styleable>
+</resources>

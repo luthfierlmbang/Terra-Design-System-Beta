@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraDatePickerView">
+        <attr name="terraDatePickerMode">
+            <enum name="single" value="0" />
+            <enum name="range" value="1" />
+        </attr>
+        <attr name="terraDatePickerMonth" format="string" />
+        <attr name="terraDatePickerNextMonth" format="string" />
+        <attr name="terraDatePickerYear" format="string" />
+    </declare-styleable>
+</resources>

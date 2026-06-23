@@ -2,7 +2,7 @@
 
 .terraChoiceField {
   display: grid;
-  gap: var(--spacing-6);
+  gap: var(--spacing-8);
   color: var(--color-text-primary-default);
 }
 
@@ -31,16 +31,22 @@
 }
 
 .terraChoiceField__control--checkbox {
+  position: relative;
   border-radius: var(--radius-small);
 }
 
 .terraChoiceField__indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: var(--radius-small);
-  background: transparent;
-  transition: background-color 160ms ease, transform 160ms ease;
-  transform: scale(0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  transition: color 160ms ease, transform 160ms ease;
+  transform: scale(0.8);
 }
 
 .terraChoiceField__input:checked + .terraChoiceField__control {
@@ -49,8 +55,26 @@
 }
 
 .terraChoiceField__input:checked + .terraChoiceField__control .terraChoiceField__indicator {
-  background: var(--color-button-primary-text-default);
+  color: var(--color-button-primary-text-default);
   transform: scale(1);
+}
+
+.terraChoiceField__input:indeterminate + .terraChoiceField__control {
+  border-color: var(--color-button-primary-bg-default);
+  background: var(--color-button-primary-bg-default);
+}
+
+.terraChoiceField__input:indeterminate + .terraChoiceField__control .terraChoiceField__indicator {
+  color: transparent;
+}
+
+.terraChoiceField__input:indeterminate + .terraChoiceField__control::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-button-primary-text-default);
 }
 
 .terraChoiceField__input:focus-visible + .terraChoiceField__control {
@@ -77,6 +101,14 @@
 .terraChoiceField__input:disabled + .terraChoiceField__control {
   border-color: var(--color-border-disabled-default);
   background: var(--color-bg-disabled-default);
+}
+
+.terraChoiceField__input:disabled:checked + .terraChoiceField__control .terraChoiceField__indicator {
+  color: var(--color-text-primary-disabled);
+}
+
+.terraChoiceField__input:disabled:indeterminate + .terraChoiceField__control::after {
+  background: var(--color-text-primary-disabled);
 }
 
 .terraChoiceField--disabled .terraChoiceField__label,

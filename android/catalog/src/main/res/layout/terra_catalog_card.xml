@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terra_color_neutral_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.terra.ds.card.TerraCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:terraCardClickable="true"
+            app:terraCardVariant="menu"
+            app:terraCardMenuTitle="Menu Card"
+            app:terraCardMenuSubtitle="Shortcut menuju halaman utama" />
+
+        <com.terra.ds.card.TerraCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:terraCardVariant="informationFull"
+            app:terraCardCustomerName="Budi Santoso"
+            app:terraCardCustomerMeta="Nasabah Prioritas"
+            app:terraCardCustomerSecondaryText="CIF 00981231"
+            app:terraCardInfoPrimaryLabel="Nomor Rekening"
+            app:terraCardInfoPrimaryValue="1200098812"
+            app:terraCardInfoSecondaryLabel="Status"
+            app:terraCardInfoSecondaryValue="Aktif"
+            app:terraCardButtonText="Lihat Detail"
+            app:terraCardButtonType="primary"
+            app:terraCardButtonVisible="true" />
+
+        <com.terra.ds.card.TerraCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:terraCardVariant="informationInfoButton"
+            app:terraCardInfoPrimaryLabel="Informasi"
+            app:terraCardInfoPrimaryValue="Pengajuan sedang diproses"
+            app:terraCardInfoSecondaryLabel="Estimasi"
+            app:terraCardInfoSecondaryValue="1 x 24 jam"
+            app:terraCardButtonText="Cek Status"
+            app:terraCardButtonType="secondary"
+            app:terraCardButtonVisible="true" />
+
+        <com.terra.ds.card.TerraCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:terraCardVariant="informationCustomerOnly"
+            app:terraCardCustomerName="Siti Aminah"
+            app:terraCardCustomerMeta="Nasabah Baru"
+            app:terraCardCustomerSecondaryText="Terdaftar 12 Mei 2026" />
+
+        <com.terra.ds.card.TerraCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:terraCardVariant="informationCustomerButton"
+            app:terraCardCustomerName="Andi Pratama"
+            app:terraCardCustomerMeta="Butuh verifikasi"
+            app:terraCardCustomerSecondaryText="Dokumen belum lengkap"
+            app:terraCardButtonEnabled="false"
+            app:terraCardButtonText="Hubungi Nasabah"
+            app:terraCardButtonType="outlinedPrimary"
+            app:terraCardButtonVisible="true" />
+
+        <com.terra.ds.card.TerraCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:terraCardVariant="informationInfoOnly"
+            app:terraCardInfoPrimaryLabel="Informasi"
+            app:terraCardInfoPrimaryValue="Tidak ada data tambahan untuk ditampilkan"
+            app:terraCardInfoSecondaryLabel="Catatan"
+            app:terraCardInfoSecondaryValue="Silakan periksa kembali nanti" />
+    </LinearLayout>
+</ScrollView>

@@ -6,5 +6,5 @@
       "@terra/web-ui": ["../../packages/web-ui/src"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "../../packages/web-ui/src/images.d.ts"]
 }

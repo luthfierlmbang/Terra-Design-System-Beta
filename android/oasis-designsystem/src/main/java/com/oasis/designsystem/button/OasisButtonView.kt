@@ -26,10 +26,12 @@ class OasisButtonView @JvmOverloads constructor(
         set(value) {
             field = value
             applySize()
+            applyStyle()
         }
 
     init {
         isAllCaps = false
+        stateListAnimator = null
         parseAttributes(attrs)
         applySize()
         applyStyle()
@@ -42,7 +44,6 @@ class OasisButtonView @JvmOverloads constructor(
 
     private fun parseAttributes(attrs: AttributeSet?) {
         if (attrs == null) return
-
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.OasisButtonView)
         variant = OasisButtonVariant.from(
             typedArray.getInt(R.styleable.OasisButtonView_oasisButtonVariant, 0)
@@ -54,23 +55,24 @@ class OasisButtonView @JvmOverloads constructor(
     }
 
     private fun applySize() {
+        val res = context.resources
         when (size) {
             OasisButtonSize.LARGE -> {
-                minHeight = context.resources.getDimensionPixelSize(TokensR.dimen.oasis_button_height_large)
-                val horizontalPadding = context.resources.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_horizontal)
-                setPaddingRelative(horizontalPadding, paddingTop, horizontalPadding, paddingBottom)
+                val hPad = res.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_horizontal)
+                val vPad = res.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_vertical_large)
+                setPaddingRelative(hPad, vPad, hPad, vPad)
                 TextViewCompat.setTextAppearance(this, R.style.TextAppearance_Oasis_Button_Large)
             }
             OasisButtonSize.MEDIUM -> {
-                minHeight = context.resources.getDimensionPixelSize(TokensR.dimen.oasis_button_height_medium)
-                val horizontalPadding = context.resources.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_horizontal)
-                setPaddingRelative(horizontalPadding, paddingTop, horizontalPadding, paddingBottom)
+                val hPad = res.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_horizontal)
+                val vPad = res.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_vertical)
+                setPaddingRelative(hPad, vPad, hPad, vPad)
                 TextViewCompat.setTextAppearance(this, R.style.TextAppearance_Oasis_Button_Medium)
             }
             OasisButtonSize.SMALL -> {
-                minHeight = context.resources.getDimensionPixelSize(TokensR.dimen.oasis_button_height_small)
-                val horizontalPadding = context.resources.getDimensionPixelSize(TokensR.dimen.oasis_spacing_16)
-                setPaddingRelative(horizontalPadding, paddingTop, horizontalPadding, paddingBottom)
+                val hPad = res.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_horizontal_small)
+                val vPad = res.getDimensionPixelSize(TokensR.dimen.oasis_button_padding_vertical)
+                setPaddingRelative(hPad, vPad, hPad, vPad)
                 TextViewCompat.setTextAppearance(this, R.style.TextAppearance_Oasis_Button_Small)
             }
         }
@@ -81,31 +83,31 @@ class OasisButtonView @JvmOverloads constructor(
             !isEnabled -> resolveDisabledAppearance()
             else -> resolveEnabledAppearance()
         }
-
         background = ContextCompat.getDrawable(context, appearance.backgroundRes)
         setTextColor(ContextCompat.getColor(context, appearance.textColorRes))
     }
 
     private fun resolveEnabledAppearance(): ButtonAppearance {
+        val isLarge = size == OasisButtonSize.LARGE
         return when (variant) {
             OasisButtonVariant.PRIMARY -> ButtonAppearance(
-                R.drawable.oasis_bg_button_primary,
+                if (isLarge) R.drawable.oasis_bg_button_primary_large else R.drawable.oasis_bg_button_primary,
                 TokensR.color.oasis_text_on_primary,
             )
             OasisButtonVariant.SECONDARY -> ButtonAppearance(
-                R.drawable.oasis_bg_button_secondary,
-                TokensR.color.oasis_text_on_primary,
+                if (isLarge) R.drawable.oasis_bg_button_secondary_large else R.drawable.oasis_bg_button_secondary,
+                TokensR.color.oasis_text_action_secondary,
             )
             OasisButtonVariant.TERTIARY -> ButtonAppearance(
                 R.drawable.oasis_bg_button_tertiary,
-                TokensR.color.oasis_primary,
+                TokensR.color.oasis_text_action_secondary,
             )
         }
     }
 
     private fun resolveDisabledAppearance(): ButtonAppearance {
         return ButtonAppearance(
-            R.drawable.oasis_bg_button_disabled,
+            if (size == OasisButtonSize.LARGE) R.drawable.oasis_bg_button_disabled_large else R.drawable.oasis_bg_button_disabled,
             TokensR.color.oasis_text_disabled,
         )
     }

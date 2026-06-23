@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraPageControlView">
+            <attr name="terraPageCount" format="integer" />
+            <attr name="terraSelectedPage" format="integer" />
+        </declare-styleable>
+</resources>

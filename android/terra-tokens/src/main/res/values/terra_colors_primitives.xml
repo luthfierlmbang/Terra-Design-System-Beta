@@ -22,4 +22,7 @@
     <color name="terra_color_neutral_70">#7A7D7F</color>
     <color name="terra_color_neutral_80">#555555</color>
     <color name="terra_color_neutral_90">#333333</color>
+    <color name="terra_color_black_alpha_10">#1A000000</color>
+    <color name="terra_color_black_alpha_12">#1F000000</color>
+    <color name="terra_color_black_alpha_50">#80000000</color>
 </resources>

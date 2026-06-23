@@ -696,6 +696,12 @@ export const registry: DocEntry[] = [
     group: 'Foundations',
     platform: 'Web + Android',
     description: 'Core TERRA roles for color, shadow, disabled state, and CTA typography.',
+    category: 'Token foundation',
+    keywords: ['foundations', 'tokens', 'color', 'shadow', 'typography'],
+    guidance: {
+      summary: 'Foundations define the visual rules shared across every catalog component and Android implementation.',
+      usage: 'Use this page as the source of truth when mapping component decisions back to semantic token roles.',
+    },
     bareDemo: true,
     demo: (
       <div className="specimen specimen--foundations">
@@ -733,6 +739,12 @@ export const registry: DocEntry[] = [
     group: 'Foundations',
     platform: 'Web + Android',
     description: 'Design token reference for colors, semantic aliases, and cross-platform mapping.',
+    category: 'Token reference',
+    keywords: ['tokens', 'semantic', 'primitives', 'android', 'web'],
+    guidance: {
+      summary: 'Tokens keep Terra documentation and Android resources aligned through a shared naming layer.',
+      usage: 'Reference semantic aliases first, then drill into primitive values only when implementation needs exact mappings.',
+    },
     bareDemo: true,
     demo: <TerraTokenShowcase />,
     androidSnippet: androidSnippets.foundations,
@@ -743,14 +755,20 @@ export const registry: DocEntry[] = [
     group: 'Foundations',
     platform: 'Web + Android',
     description: 'Grouped operational iconography across action, navigation, status, info, domain, and system.',
+    category: 'Iconography',
+    keywords: ['icon', 'status', 'navigation', 'action', 'symbol'],
+    guidance: {
+      summary: 'The icon library covers the most common operational and domain-specific symbols used in Terra flows.',
+      usage: 'Pick icons by meaning first, then size and color them through tokens so they stay consistent with surrounding UI.',
+    },
     demoAlign: 'start',
     demo: (
       <div className="specimen specimen--icons">
         {iconGroups.map((group) => (
-          <div key={group.category} className="specimen-icon-group">
+          <div key={`${group.category}-${group.label}`} className="specimen-icon-group">
             <strong>{group.label}</strong>
             <div className="specimen-icon-grid">
-              {group.names.map((name) => (
+              {group.rows.flatMap((row) => row.names).map((name) => (
                 <span key={`${group.category}-${name}`} className="specimen-icon-cell">
                   <TerraIcon category={group.category} name={name} size="sm" />
                 </span>
@@ -787,6 +805,12 @@ export const registry: DocEntry[] = [
     group: 'Actions',
     platform: 'Web + Android',
     description: 'Primary CTA family with filled, outlined, danger, and text variants in normal and small sizes.',
+    category: 'Call to action',
+    keywords: ['button', 'cta', 'action', 'primary', 'secondary'],
+    guidance: {
+      summary: 'Buttons carry the strongest interaction weight in Terra and should create a clear visual priority in each screen.',
+      usage: 'Start with a single primary button, then introduce secondary or text variants only when the hierarchy truly needs them.',
+    },
     demo: (
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
         <TerraButton variant="primary">Button</TerraButton>
@@ -830,6 +854,12 @@ export const registry: DocEntry[] = [
     group: 'Selection',
     platform: 'Web + Android',
     description: 'Labeled checkbox control with checked, unchecked, and disabled states.',
+    category: 'Multi-select',
+    keywords: ['checkbox', 'selection', 'multi select', 'choice'],
+    guidance: {
+      summary: 'Checkboxes help users choose any number of valid options without forcing a single answer.',
+      usage: 'Use them inside grouped selections where users expect independent yes/no decisions for each row.',
+    },
     demoAlign: 'start',
     demo: (
       <div style={{ display: 'grid', gap: 16 }}>
@@ -864,6 +894,12 @@ export const registry: DocEntry[] = [
     group: 'Selection',
     platform: 'Web + Android',
     description: 'Single-selection control with labeled options and disabled support.',
+    category: 'Single select',
+    keywords: ['radio', 'single select', 'choice', 'form'],
+    guidance: {
+      summary: 'Radio Button is the standard control for selecting exactly one option from a short visible set.',
+      usage: 'Keep options mutually exclusive and scan-friendly so users can compare choices without opening another surface.',
+    },
     demoAlign: 'start',
     demo: (
       <div style={{ display: 'grid', gap: 16 }}>
@@ -897,6 +933,12 @@ export const registry: DocEntry[] = [
     group: 'Selection',
     platform: 'Web + Android',
     description: 'Switch control with label and active state for preference and setting flows.',
+    category: 'Binary setting',
+    keywords: ['toggle', 'switch', 'setting', 'on off'],
+    guidance: {
+      summary: 'Toggle is the preferred binary control for settings that apply immediately when switched.',
+      usage: 'Write labels so the enabled state is obvious without needing extra interpretation from the user.',
+    },
     demoAlign: 'start',
     demo: (
       <div style={{ display: 'grid', gap: 16, width: 320 }}>
@@ -931,6 +973,12 @@ export const registry: DocEntry[] = [
     group: 'Selection',
     platform: 'Web + Android',
     description: 'Selectable chip with optional icons and counter badge for filters and statuses.',
+    category: 'Filter selection',
+    keywords: ['chip', 'filter', 'tag', 'selection', 'counter'],
+    guidance: {
+      summary: 'Chip provides a compact selection surface for filters, tags, and lightweight categorical choices.',
+      usage: 'Use chips when users need to scan and toggle multiple short options without leaving the current context.',
+    },
     demo: (
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
         <TerraChip leftIcon={<TerraIcon category="action" name="check" size="sm" />} counter={2} selected>
@@ -970,6 +1018,12 @@ export const registry: DocEntry[] = [
     group: 'Selection',
     platform: 'Web + Android',
     description: 'Tab bar with configurable labels, selected state, and a scrollable option.',
+    category: 'Peer navigation',
+    keywords: ['tabs', 'tab bar', 'navigation', 'switch view'],
+    guidance: {
+      summary: 'Tabs switch between peer views that belong to the same screen-level context.',
+      usage: 'Keep tab labels concise and comparable so users understand the difference between destinations at a glance.',
+    },
     demoAlign: 'stretch',
     demo: <TerraTabs items={previewTabs} selectedId="detail" />,
     props: [
@@ -997,6 +1051,12 @@ export const registry: DocEntry[] = [
     group: 'Forms',
     platform: 'Web + Android',
     description: 'Configurable text input with label, helper, prefix/suffix, and icon variations.',
+    category: 'Text input',
+    keywords: ['text field', 'input', 'form', 'helper', 'prefix'],
+    guidance: {
+      summary: 'Text Field is the default long-form input surface for labeled data entry in Terra forms.',
+      usage: 'Keep labels persistent and use helper text to clarify formatting, validation, or business rules before users submit.',
+    },
     demoAlign: 'start',
     demo: (
       <div style={{ display: 'grid', gap: 20, ...formStyle }}>
@@ -1039,6 +1099,12 @@ export const registry: DocEntry[] = [
     group: 'Forms',
     platform: 'Web + Android',
     description: 'Search input shell with default, focus, result, and disabled visual states.',
+    category: 'Search input',
+    keywords: ['search', 'search bar', 'input', 'filter', 'query'],
+    guidance: {
+      summary: 'Search Bar is the dedicated query field for finding records, screens, or filtered content sets.',
+      usage: 'Place it close to the content being filtered and make clearing or revising the query feel lightweight.',
+    },
     demoAlign: 'start',
     demo: (
       <div style={formStyle}>
@@ -1070,6 +1136,12 @@ export const registry: DocEntry[] = [
     group: 'Forms',
     platform: 'Web + Android',
     description: 'Dropdown field with placeholder, filled state, and optional search treatment.',
+    category: 'List selection',
+    keywords: ['select', 'dropdown', 'option list', 'form'],
+    guidance: {
+      summary: 'Select is best for choosing one value from a known list when showing every option at once is inefficient.',
+      usage: 'Use clear option labels and a placeholder that tells users what kind of value they are expected to choose.',
+    },
     demoAlign: 'start',
     demo: (
       <div style={formStyle}>
@@ -1110,6 +1182,12 @@ export const registry: DocEntry[] = [
     group: 'Forms',
     platform: 'Web + Android',
     description: 'Stepper-style quantity control with minimum, maximum, and editable amount states.',
+    category: 'Numeric stepper',
+    keywords: ['quantity', 'stepper', 'counter', 'numeric input'],
+    guidance: {
+      summary: 'Quantity Editor handles small-step numeric adjustments where increment and decrement actions are faster than typing.',
+      usage: 'Use it for bounded amounts such as quantities, counts, or units where users benefit from clear minimum and maximum behavior.',
+    },
     demo: <TerraQuantityEditor value="1.000" />,
     props: [
       { name: 'value', type: 'string', description: 'Current quantity display value.' },
@@ -1137,6 +1215,12 @@ export const registry: DocEntry[] = [
     group: 'Feedback',
     platform: 'Web + Android',
     description: 'Horizontal progress treatment with multiple bar styles for workflow states.',
+    category: 'Progress feedback',
+    keywords: ['progress', 'loading', 'status', 'workflow'],
+    guidance: {
+      summary: 'Progress Bar communicates how far a user or process has moved through a measurable task.',
+      usage: 'Use determinate values whenever possible so users can build confidence about how much work remains.',
+    },
     demoAlign: 'stretch',
     demo: (
       <div style={{ display: 'grid', gap: 16 }}>
@@ -1200,6 +1284,12 @@ export const registry: DocEntry[] = [
     group: 'Feedback',
     platform: 'Web + Android',
     description: 'Inline alert and information banner with tone variants and detailed messaging.',
+    category: 'Inline messaging',
+    keywords: ['ticker', 'banner', 'alert', 'warning', 'message'],
+    guidance: {
+      summary: 'Ticker surfaces short contextual messages inline without interrupting the user flow with a modal pattern.',
+      usage: 'Match the tone to the message severity and keep the copy compact enough to remain scannable near related content.',
+    },
     demoAlign: 'stretch',
     demo: (
       <div style={{ display: 'grid', gap: 16 }}>
@@ -1242,6 +1332,12 @@ export const registry: DocEntry[] = [
     group: 'Feedback',
     platform: 'Web + Android',
     description: 'Compact labeled timer used to surface active countdown and duration states.',
+    category: 'Time feedback',
+    keywords: ['timer', 'countdown', 'duration', 'time'],
+    guidance: {
+      summary: 'Timer communicates active time-based status in a compact footprint that stays visible near the task at hand.',
+      usage: 'Use consistent formatting and reserve the active emphasis for moments when countdown urgency genuinely matters.',
+    },
     demo: (
       <div style={{ display: 'flex', gap: 16 }}>
         <TerraTimer label="Timer" value="00:45" active />
@@ -1271,6 +1367,12 @@ export const registry: DocEntry[] = [
     group: 'Feedback',
     platform: 'Web + Android',
     description: 'Progress and wait-state indicator with inline and stacked messaging treatment.',
+    category: 'Wait state',
+    keywords: ['loading', 'spinner', 'progress', 'waiting'],
+    guidance: {
+      summary: 'Loading indicates an indeterminate wait while work completes in the background.',
+      usage: 'Add a short message when it helps users understand what the system is doing or why they need to wait.',
+    },
     demo: <TerraLoading message="Preparing account verification" />,
     props: [
       { name: 'message', type: 'string', default: "'Dalam Proses...'", description: 'Loading text.' },
@@ -1293,6 +1395,12 @@ export const registry: DocEntry[] = [
     group: 'Feedback',
     platform: 'Web + Android',
     description: 'Pagination dots for onboarding, carousel, and multi-page content flows.',
+    category: 'Pagination indicator',
+    keywords: ['page control', 'pagination dots', 'carousel', 'onboarding'],
+    guidance: {
+      summary: 'Page Control shows position within a short sequence of peer pages such as onboarding or a carousel.',
+      usage: 'Use it only when users can meaningfully understand progress from dots alone and the page count stays small.',
+    },
     demo: <TerraPageControl count={5} selectedPage={2} />,
     props: [
       { name: 'count', type: 'number', description: 'Total number of dots/pages.' },
@@ -1312,6 +1420,12 @@ export const registry: DocEntry[] = [
     group: 'Feedback',
     platform: 'Android',
     description: 'Illustrated empty, error, and success state panel with optional call-to-action.',
+    category: 'No data state',
+    keywords: ['empty state', 'empty', 'error', 'success', 'cta'],
+    guidance: {
+      summary: 'Empty State gives users a clear explanation and a next step when a screen has no available content.',
+      usage: 'Pair the illustration with one concise recovery path whenever the user can take action to resolve the state.',
+    },
     demo: (
       <TerraEmptyState
         title="Connection Error"
@@ -1348,6 +1462,12 @@ export const registry: DocEntry[] = [
     group: 'Navigation',
     platform: 'Android',
     description: 'Mobile app header with status strip, leading icon, title, and page identifier metadata.',
+    category: 'Top navigation',
+    keywords: ['header', 'navigation', 'title bar', 'page identifier'],
+    guidance: {
+      summary: 'Header establishes context at the top of a screen and anchors users with title, identity, and system chrome.',
+      usage: 'Keep the title stable and let supporting metadata clarify which module or APK surface the page belongs to.',
+    },
     demoAlign: 'stretch',
     demo: (
       <TerraHeader
@@ -1381,6 +1501,12 @@ export const registry: DocEntry[] = [
     group: 'Navigation',
     platform: 'Android',
     description: 'Bottom navigation shell for mobile destinations such as home, activity, and notifications.',
+    category: 'Bottom navigation',
+    keywords: ['navbar', 'bottom nav', 'navigation', 'mobile'],
+    guidance: {
+      summary: 'Navbar keeps the highest-level mobile destinations available within thumb reach.',
+      usage: 'Limit the number of destinations and keep the active item obvious so users can orient themselves quickly.',
+    },
     demoAlign: 'stretch',
     demo: <TerraNavbar items={navbarItems} activeId="home" />,
     props: [

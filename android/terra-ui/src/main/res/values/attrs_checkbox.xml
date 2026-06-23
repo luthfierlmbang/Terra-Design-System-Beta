@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="terraSelectionLabel" format="string" />
+    <attr name="terraSelectionChecked" format="boolean" />
+    <attr name="terraSelectionEnabled" format="boolean" />
+
+    <declare-styleable name="TerraCheckboxView">
+        <attr name="terraSelectionLabel" />
+        <attr name="terraSelectionChecked" />
+        <attr name="terraSelectionEnabled" />
+    </declare-styleable>
+</resources>

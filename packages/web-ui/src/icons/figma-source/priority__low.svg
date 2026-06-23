@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id=" ">
+<path id="Icon" fill-rule="evenodd" clip-rule="evenodd" d="M0 20V10L0.00384188 9.7201C0.152068 4.32667 4.57076 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20H0Z" fill="var(--fill-0, #027479)"/>
+<path id="Icon_2" d="M6 11L10 8L14 11" stroke="var(--stroke-0, white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

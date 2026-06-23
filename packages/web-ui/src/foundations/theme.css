@@ -1,1 +1,7 @@
 @import '../../../../tokens/dist/css/variables.css';
+
+:root {
+  --terra-font-family-heading: var(--font-family-brand);
+  --terra-font-family-body: var(--font-family-brand);
+  --terra-font-family-system: var(--font-family-brand);
+}

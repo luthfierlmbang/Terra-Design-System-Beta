@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Terra.Card">
+        <item name="android:background">@drawable/terra_bg_card</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="Widget.Terra.Card.Title" parent="TextAppearance.Terra.Body.Medium.Bold">
+        <item name="android:textColor">@color/terra_color_text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.Terra.Card.Subtitle" parent="TextAppearance.Terra.Caption">
+        <item name="android:textColor">@color/terra_color_text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.Terra.Card.CustomerName" parent="TextAppearance.Terra.Body.Small.Bold">
+        <item name="android:textColor">@color/terra_color_text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget.Terra.Card.CustomerMeta" parent="TextAppearance.Terra.Caption">
+        <item name="android:textColor">@color/terra_color_text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.Terra.Card.InfoLabel" parent="TextAppearance.Terra.Caption">
+        <item name="android:textColor">@color/terra_color_text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.Terra.Card.InfoValue" parent="TextAppearance.Terra.Body.Small">
+        <item name="android:textColor">@color/terra_color_text_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

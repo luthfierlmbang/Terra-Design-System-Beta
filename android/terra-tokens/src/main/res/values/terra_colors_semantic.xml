@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Primary -->
+    <color name="terra_color_primary">@color/terra_color_teal_700</color>
+    <color name="terra_color_primary_hover">@color/terra_color_teal_700</color>
+    <color name="terra_color_primary_surface">@color/terra_color_teal_050</color>
+    <color name="terra_color_primary_light">@color/terra_color_teal_100</color>
+
+    <!-- Secondary -->
+    <color name="terra_color_secondary">@color/terra_color_orange_500</color>
+    <color name="terra_color_secondary_hover">@color/terra_color_orange_600</color>
+    <color name="terra_color_secondary_surface">@color/terra_color_orange_050</color>
+    <color name="terra_color_secondary_light">@color/terra_color_orange_100</color>
+
+    <!-- Surface -->
+    <color name="terra_color_surface">@color/terra_color_neutral_10</color>
+    <color name="terra_color_surface_variant">@color/terra_color_neutral_30</color>
+    <color name="terra_color_background">@color/terra_color_neutral_10</color>
+
+    <!-- Text -->
+    <color name="terra_color_text_primary">@color/terra_color_neutral_90</color>
+    <color name="terra_color_text_secondary">@color/terra_color_neutral_70</color>
+    <color name="terra_color_text_tertiary">@color/terra_color_neutral_60</color>
+    <color name="terra_color_text_disabled">@color/terra_color_neutral_50</color>
+    <color name="terra_color_text_on_primary">@color/terra_color_neutral_10</color>
+
+    <!-- Border -->
+    <color name="terra_color_border">@color/terra_color_neutral_40</color>
+    <color name="terra_color_border_focus">@color/terra_color_teal_700</color>
+    <color name="terra_color_divider">@color/terra_color_neutral_40</color>
+
+    <!-- State -->
+    <color name="terra_color_disabled">@color/terra_color_neutral_50</color>
+    <color name="terra_color_disabled_surface">@color/terra_color_neutral_40</color>
+
+    <!-- Feedback -->
+    <color name="terra_color_info">@color/terra_color_blue_500</color>
+    <color name="terra_color_info_surface">@color/terra_color_blue_050</color>
+    <color name="terra_color_info_light">@color/terra_color_blue_100</color>
+
+    <color name="terra_color_success">@color/terra_color_green_500</color>
+
+    <color name="terra_color_warning">@color/terra_color_yellow_500</color>
+
+    <color name="terra_color_error">@color/terra_color_red_500</color>
+    <color name="terra_color_error_surface">@color/terra_color_red_050</color>
+
+    <!-- Utility -->
+    <color name="terra_color_overlay">@color/terra_color_neutral_80</color>
+    <color name="terra_color_overlay_scrim">@color/terra_color_black_alpha_50</color>
+    <color name="terra_color_overlay_subtle">@color/terra_color_black_alpha_10</color>
+    <color name="terra_color_transparent">@android:color/transparent</color>
+</resources>

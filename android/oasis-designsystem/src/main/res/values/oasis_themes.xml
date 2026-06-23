@@ -9,6 +9,8 @@
         <item name="colorError">@color/oasis_feedback_danger</item>
         <item name="android:statusBarColor">@color/oasis_primary</item>
         <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/jenius_sans</item>
+        <item name="fontFamily">@font/jenius_sans</item>
     </style>
 
     <style name="Theme.Oasis" parent="Theme.Oasis.Base"/>

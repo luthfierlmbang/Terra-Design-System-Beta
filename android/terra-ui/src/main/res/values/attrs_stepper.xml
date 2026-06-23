@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraStepperView">
+            <attr name="terraStepperCount" format="integer" />
+            <attr name="terraStepperCurrentStep" format="integer" />
+            <attr name="terraStepperErrorStep" format="integer" />
+        </declare-styleable>
+</resources>

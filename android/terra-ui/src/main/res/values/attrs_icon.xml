@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="TerraIconView">
-        <attr name="terraIconCategory" format="enum">
+        <attr name="terraIconCategory">
             <enum name="system" value="0" />
             <enum name="action" value="1" />
             <enum name="navigation" value="2" />
@@ -9,7 +9,7 @@
             <enum name="info" value="4" />
             <enum name="domain" value="5" />
         </attr>
-        <attr name="terraIconName" format="enum">
+        <attr name="terraIconName">
             <enum name="placeholder" value="0" />
             <enum name="plus" value="1" />
             <enum name="check" value="2" />

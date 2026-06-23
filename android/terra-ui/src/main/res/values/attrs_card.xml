@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TerraCardView">
+        <attr name="terraCardVariant">
+            <enum name="menu" value="0" />
+            <enum name="informationFull" value="1" />
+            <enum name="informationInfoButton" value="2" />
+            <enum name="informationCustomerOnly" value="3" />
+            <enum name="informationCustomerButton" value="4" />
+            <enum name="informationInfoOnly" value="5" />
+        </attr>
+
+        <attr name="terraCardMenuTitle" format="string" />
+        <attr name="terraCardMenuSubtitle" format="string" />
+
+        <attr name="terraCardCustomerName" format="string" />
+        <attr name="terraCardCustomerMeta" format="string" />
+        <attr name="terraCardCustomerSecondaryText" format="string" />
+
+        <attr name="terraCardInfoPrimaryLabel" format="string" />
+        <attr name="terraCardInfoPrimaryValue" format="string" />
+        <attr name="terraCardInfoSecondaryLabel" format="string" />
+        <attr name="terraCardInfoSecondaryValue" format="string" />
+
+        <attr name="terraCardClickable" format="boolean" />
+        <attr name="terraCardButtonText" format="string" />
+        <attr name="terraCardButtonVisible" format="boolean" />
+        <attr name="terraCardButtonEnabled" format="boolean" />
+        <attr name="terraCardButtonType">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="outlinedPrimary" value="2" />
+            <enum name="outlinedSecondary" value="3" />
+            <enum name="danger" value="4" />
+            <enum name="text" value="5" />
+        </attr>
+    </declare-styleable>
+</resources>

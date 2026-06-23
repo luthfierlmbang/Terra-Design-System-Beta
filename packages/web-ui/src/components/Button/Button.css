@@ -7,7 +7,7 @@
   gap: var(--spacing-8);
   border-radius: var(--radius-medium);
   border: 1px solid transparent;
-  font-family: inherit;
+  font-family: var(--font-family-brand);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, opacity 160ms ease;
@@ -19,13 +19,13 @@
 }
 
 .terraButton--normal {
-  padding: 8px var(--spacing-32);
+  padding: var(--spacing-8) var(--spacing-32);
   font-size: 16px;
   line-height: 24px;
 }
 
 .terraButton--small {
-  padding: 4px var(--spacing-32);
+  padding: var(--spacing-4) var(--spacing-32);
   font-size: 14px;
   line-height: 24px;
   border-radius: 6px;
@@ -33,7 +33,7 @@
 
 .terraButton--text.terraButton--normal,
 .terraButton--text.terraButton--small {
-  padding: 4px var(--spacing-16);
+  padding: var(--spacing-4) var(--spacing-16);
 }
 
 .terraButton--fullWidth {

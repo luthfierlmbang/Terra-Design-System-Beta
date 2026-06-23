@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="TerraHeaderView">
+        <attr name="terraHeaderVariant" format="enum">
+            <enum name="main" value="0" />
+            <enum name="secondary" value="1" />
+        </attr>
+        <attr name="terraHeaderLeading" format="enum">
+            <enum name="none" value="0" />
+            <enum name="back" value="1" />
+            <enum name="menu" value="2" />
+            <enum name="icon" value="3" />
+        </attr>
         <attr name="terraHeaderTitle" format="string" />
+        <attr name="terraHeaderTitleText" format="string" />
+        <attr name="terraHeaderSubtitleText" format="string" />
+        <attr name="terraHeaderIdentifierText" format="string" />
         <attr name="terraHeaderModuleName" format="string" />
         <attr name="terraHeaderApkName" format="string" />
+        <attr name="terraHeaderShowIdentifier" format="boolean" />
+        <attr name="terraHeaderShowActionOne" format="boolean" />
+        <attr name="terraHeaderShowActionTwo" format="boolean" />
         <attr name="terraHeaderShowStatusBar" format="boolean" />
     </declare-styleable>
 </resources>

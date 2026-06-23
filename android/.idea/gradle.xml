@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/catalog" />
+            <option value="$PROJECT_DIR$/oasis-catalog" />
+            <option value="$PROJECT_DIR$/oasis-designsystem" />
+            <option value="$PROJECT_DIR$/oasis-designsystem-tokens" />
+            <option value="$PROJECT_DIR$/terra-tokens" />
+            <option value="$PROJECT_DIR$/terra-ui" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
